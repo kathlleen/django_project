@@ -1,10 +1,429 @@
-<!DOCTYPE html>
-<html lang="en">
+{% load static %}
+
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Home page</title>
+  <meta charset="utf-8" />
+  <title>SQ R3</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 </head>
+
 <body>
-<h2>Page Content</h2>
+
+<section class="home">
+    <header>
+
+        <div class="logo">
+            <p>SQ R3</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Профиль</a></li>
+                <li><a href="#">Войти</a></li>
+                <li><a href="#">Мой профиль</a></li>
+            </ul>
+
+            <button class="btn">Заказать</button>
+
+
+            <button class="search-btn">
+                <svg width="30" height="30" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.3333 27.6667C21.6971 27.6667 27.6666 21.6971 27.6666 14.3333C27.6666 6.96954 21.6971 1 14.3333 1C6.96953 1 1 6.96954 1 14.3333C1 21.6971 6.96953 27.6667 14.3333 27.6667Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M31 31L23.75 23.75" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </button>
+
+
+        </nav>
+    </header>
+
+    <div class="main-image-block">
+
+        <div class="right-block-home">
+            <div class="home-media">
+                <a href="#"><svg width="16" height="30" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 0H11.6364C9.70752 0 7.85767 0.790176 6.49377 2.1967C5.12987 3.60322 4.36364 5.51088 4.36364 7.5V12H0V18H4.36364V30H10.1818V18H14.5455L16 12H10.1818V7.5C10.1818 7.10218 10.3351 6.72064 10.6078 6.43934C10.8806 6.15804 11.2506 6 11.6364 6H16V0Z" fill="white"/>
+                </svg></a>
+                <a href="#"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.5 1H8.5C4.35786 1 1 4.35786 1 8.5V23.5C1 27.6421 4.35786 31 8.5 31H23.5C27.6421 31 31 27.6421 31 23.5V8.5C31 4.35786 27.6421 1 23.5 1Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21.9999 15.055C22.185 16.3033 21.9718 17.5783 21.3906 18.6985C20.8093 19.8187 19.8896 20.7271 18.7624 21.2945C17.6351 21.8619 16.3576 22.0594 15.1116 21.8589C13.8656 21.6584 12.7146 21.0701 11.8222 20.1777C10.9298 19.2853 10.3415 18.1343 10.141 16.8883C9.94053 15.6423 10.138 14.3648 10.7054 13.2375C11.2728 12.1102 12.1812 11.1906 13.3014 10.6093C14.4216 10.0281 15.6966 9.81485 16.9449 9.99996C18.2183 10.1888 19.3972 10.7822 20.3075 11.6924C21.2177 12.6027 21.8111 13.7816 21.9999 15.055Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24.25 7.75H24.265" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></a>
+                <a href="#"><svg width="32" height="26" viewBox="0 0 32 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M31 1.01345C29.6942 1.91691 28.2483 2.60792 26.7182 3.05985C25.8969 2.13364 24.8055 1.47716 23.5914 1.1792C22.3774 0.88125 21.0993 0.956198 19.9301 1.39391C18.7609 1.83162 17.757 2.61098 17.0541 3.62658C16.3512 4.64218 15.9832 5.84501 16 7.07241V8.40992C13.6036 8.47087 11.229 7.94957 9.08774 6.89244C6.94647 5.83531 5.10498 4.27517 3.72727 2.35097C3.72727 2.35097 -1.72727 14.3886 10.5455 19.7387C7.73708 21.6085 4.39158 22.5461 1 22.4137C13.2727 29.1013 28.2727 22.4137 28.2727 7.03228C28.2715 6.65972 28.235 6.28808 28.1636 5.92214C29.5554 4.57592 30.5375 2.87623 31 1.01345V1.01345Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg> </a>
+
+            </div>
+        </div>
+
+        <div class="left-block-home">
+
+            <section class="title-block">
+                <h1>Enjoy your life in our<br>
+                    luxurious furniture</h1>
+                <p>If you are looking for a furniture then you have <br>
+                    come to the right place.</p>
+                <button class="btn">Заказать</button>
+            </section>
+
+    </div>
+
+</section>
+
+<section class="stats">
+    <div class="stats-block">
+        <div class="stat">
+            <h2>120 k</h2>
+            <h4>Furniture Sale</h4>
+        </div>
+        <div class="stat">
+            <h2>98 k</h2>
+            <h4>Review <span>(4.5)</span></h4>
+        </div>
+        <div class="stat">
+            <h2>125</h2>
+            <h4>Furniture Categories</h4>
+        </div>
+    </div>
+
+    <div class="black-block"></div>
+</section>
+
+
+
+<section class="about">
+
+    <div class="section-title">
+        <h3>Learn about us</h3>
+        <div class="title-footer">
+            <svg width="69" height="1" viewBox="0 0 69 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="69" height="1" fill="black"/>
+            </svg>
+            <h6>It’s short title here</h6>
+        </div>
+    </div>
+
+
+    <div class="about-content">
+        <div class="about-image">
+            <img src="{% static 'img/image1.jfif' %}" alt="furniture">
+        </div>
+        <div class="about-info">
+            <p>Lorem Ipsum has been the industry's standard dummy text ever to since the 1500s,
+                type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting. type and scrambled it to make a type specimen book.
+                It has survived not only five centuries,
+                but also the leap into electronic typesetting</p>
+            <button class="btn">О нас</button>
+            <div class="about-logos">
+                <img src="img/amazon.png" alt="amazon">
+                <img src="img/alibaba.png" alt="alibaba">
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+
+
+<section class="service">
+
+    <div class="section-title">
+        <h3>We provide that service</h3>
+        <div class="title-footer">
+            <svg width="69" height="1" viewBox="0 0 69 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="69" height="1" fill="black"/>
+            </svg>
+            <h6>It is a long established fact that a reader <br>
+                will be distracted by the service.</h6>
+        </div>
+    </div>
+
+    <div class="service-cards">
+        <div class="service-card">
+            <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="75" height="75" rx="5" fill="#15BCE0" fill-opacity="0.1"/>
+                <path d="M46 20H16V46H46V20Z" stroke="#15BCE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M46 30H54L60 36V46H46V30Z" stroke="#15BCE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M25 56C27.7614 56 30 53.7614 30 51C30 48.2386 27.7614 46 25 46C22.2386 46 20 48.2386 20 51C20 53.7614 22.2386 56 25 56Z" stroke="#15BCE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M51 56C53.7614 56 56 53.7614 56 51C56 48.2386 53.7614 46 51 46C48.2386 46 46 48.2386 46 51C46 53.7614 48.2386 56 51 56Z" stroke="#15BCE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h5>Free Delevary</h5>
+            <p>It is a long established fact that a reader will be the service.</p>
+        </div>
+        <div class="service-card">
+            <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="75" height="75" rx="5" fill="#E0155E" fill-opacity="0.09"/>
+                <path d="M32 36L36.5 40.5L51.5 25.5" stroke="#E0155E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M50 37.5V48C50 48.7956 49.6839 49.5587 49.1213 50.1213C48.5587 50.6839 47.7956 51 47 51H26C25.2044 51 24.4413 50.6839 23.8787 50.1213C23.3161 49.5587 23 48.7956 23 48V27C23 26.2044 23.3161 25.4413 23.8787 24.8787C24.4413 24.3161 25.2044 24 26 24H42.5" stroke="#E0155E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h5>100% Guarnatee</h5>
+            <p>It is a long established fact that a reader will be the service.</p>
+        </div>
+        <div class="service-card">
+            <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="75" height="75" rx="5" fill="#151DE0" fill-opacity="0.11"/>
+                <path d="M38.0057 20C30.8147 20 24.96 25.1643 24.96 31.5072C24.96 34.444 26.251 37.101 28.312 39.1387L20 50.6859H28.2215L31.9811 56L38.0057 46.6304L44.0302 56L47.7899 50.6859H56L47.6993 39.1387C49.7603 37.101 51.0513 34.444 51.0513 31.5072C51.0513 25.1643 45.1966 20 38.0057 20ZM38.0057 22.5572C43.6225 22.5572 48.1523 26.5527 48.1523 31.5072C48.1523 33.5649 47.3369 35.4329 46.0233 36.9412L44.8003 38.02C43.498 39.1687 41.7427 39.9678 39.8855 40.2974C39.274 40.3973 38.6511 40.4573 38.0057 40.4573C37.3602 40.4573 36.7373 40.3973 36.1258 40.2974C34.2686 39.9678 32.5134 39.1687 31.2111 38.02L29.988 36.9412C28.6744 35.4329 27.8591 33.5649 27.8591 31.5072C27.8591 26.5527 32.3888 22.5572 38.0057 22.5572ZM36.5561 25.1143C36.5561 26.5228 35.5143 27.6715 33.6571 27.6715V30.2286C34.7443 30.2286 35.7182 29.9589 36.5561 29.5294V37.9001H39.4552V25.1143H36.5561ZM30.4863 40.8768C32.3775 42.0555 34.6197 42.7747 37.0544 42.9345L31.8566 51.0055L29.8295 48.1287H25.2771L30.4863 40.8768ZM45.525 40.8768L50.7342 48.1287H46.1931L44.1548 51.0055L38.9569 42.9345C41.3916 42.7747 43.6338 42.0555 45.525 40.8768Z" fill="#151DE0"/>
+            </svg>
+            <h5>Best Quality</h5>
+            <p>It is a long established fact that a reader will be the service.</p>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="furniture">
+    <div class="furniture-title">
+        <h3>Our Furniture</h3>
+        <h6>It is a long established fact that a reader will be distracted by the service.</h6>
+    </div>
+
+    <div class="furniture-header">
+        <form>
+            <input type="text" placeholder="Search a furniture">
+            <button type="submit">
+                <svg width="20" height="20" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.6667 22.3334C17.5578 22.3334 22.3334 17.5578 22.3334 11.6667C22.3334 5.77565 17.5578 1 11.6667 1C5.77565 1 1 5.77565 1 11.6667C1 17.5578 5.77565 22.3334 11.6667 22.3334Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M25.0002 25L19.2002 19.2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </form>
+
+        <div class="furniture-links">
+            <ul>
+                <li><a href="#">All</a></li>
+                <li><a href="#">Chair</a></li>
+                <li><a href="#">Table</a></li>
+                <li><a href="#">Bed</a></li>
+                <li><a href="#">Sofa</a></li>
+                <li><a href="#">Wardrobe</a></li>
+                <li><a href="#">Almirah</a></li>
+                <li><a href="#">Dimple</a></li>
+                <li><a href="#">Back</a></li>
+                <li><a href="#">Stand</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="catalog">
+        <div class="product-card">
+            <div class="image-container">
+                <img src="{% static 'img/f1.jfif' %}" alt="Furniture">
+            </div>
+
+            <div class="product-info">
+                <div class="description">
+                    <h6>Furniture Name</h6>
+                    <h6>$250</h6>
+                </div>
+
+                <p>It is a long established fact that a reader will be the service.</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+                <img src="{% static 'img/f2.jfif' %}" alt="Furniture">
+            </div>
+
+            <div class="product-info">
+                <div class="description">
+                    <h6>Furniture Name</h6>
+                    <h6>$250</h6>
+                </div>
+
+                <p>It is a long established fact that a reader will be the service.</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+                <img src="{% static 'img/f3.jfif' %}" alt="Furniture">
+            </div>
+
+            <div class="product-info">
+                <div class="description">
+                    <h6>Furniture Name</h6>
+                    <h6>$250</h6>
+                </div>
+
+                <p>It is a long established fact that a reader will be the service.</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+                <img src="{% static 'img/f4.jfif' %}" alt="Furniture">
+            </div>
+
+            <div class="product-info">
+                <div class="description">
+                    <h6>Furniture Name</h6>
+                    <h6>$250</h6>
+                </div>
+
+                <p>It is a long established fact that a reader will be the service.</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+                <img src="{% static 'img/f1.jfif' %}" alt="Furniture">
+            </div>
+
+            <div class="product-info">
+                <div class="description">
+                    <h6>Furniture Name</h6>
+                    <h6>$250</h6>
+                </div>
+
+                <p>It is a long established fact that a reader will be the service.</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+                <img src="{% static 'img/f2.jfif' %}" alt="Furniture">
+            </div>
+
+            <div class="product-info">
+                <div class="description">
+                    <h6>Furniture Name</h6>
+                    <h6>$250</h6>
+                </div>
+
+                <p>It is a long established fact that a reader will be the service.</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+                <img src="{% static 'img/f3.jfif' %}" alt="Furniture">
+            </div>
+
+            <div class="product-info">
+                <div class="description">
+                    <h6>Furniture Name</h6>
+                    <h6>$250</h6>
+                </div>
+
+                <p>It is a long established fact that a reader will be the service.</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="image-container">
+                <img src="{% static 'img/f4.jfif' %}" alt="Furniture">
+            </div>
+
+            <div class="product-info">
+                <div class="description">
+                    <h6>Furniture Name</h6>
+                    <h6>$250</h6>
+                </div>
+
+                <p>It is a long established fact that a reader will be the service.</p>
+                <button class="btn">Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="view-btn">
+        <button class="btn">View All</button>
+    </div>
+
+
+</section>
+
+
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h2 style="font-size: 35px; color: white;">SQ R3</h2>
+
+            <div class="contacts">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="16" fill="white"/>
+                    <path d="M21.2647 16.6999C21.1102 16.6999 20.9486 16.6507 20.7941 16.6156C20.4811 16.5466 20.1735 16.455 19.8738 16.3416C19.5478 16.223 19.1896 16.2292 18.868 16.3589C18.5463 16.4886 18.284 16.7326 18.1315 17.0441L17.9769 17.3602C17.2927 16.9796 16.6639 16.5068 16.1082 15.9552C15.5566 15.3995 15.0838 14.7707 14.7032 14.0865L14.9983 13.8898C15.3097 13.7373 15.5538 13.475 15.6835 13.1533C15.8132 12.8317 15.8193 12.4734 15.7008 12.1475C15.5892 11.8471 15.4977 11.5397 15.4268 11.2272C15.3917 11.0727 15.3636 10.9111 15.3425 10.7495C15.2572 10.2547 14.998 9.80654 14.6116 9.48583C14.2252 9.16513 13.737 8.99292 13.2349 9.00022H11.1274C10.8246 8.99738 10.5248 9.05981 10.2483 9.18325C9.97182 9.3067 9.7252 9.48826 9.5252 9.71559C9.32521 9.94291 9.17655 10.2107 9.08933 10.5006C9.00211 10.7906 8.9784 11.0959 9.01979 11.3958C9.39405 14.339 10.7382 17.0735 12.8399 19.1676C14.9415 21.2616 17.681 22.5958 20.6255 22.9593H20.8924C21.4105 22.9601 21.9106 22.77 22.2975 22.4254C22.5197 22.2266 22.6972 21.983 22.8184 21.7105C22.9395 21.438 23.0014 21.1429 23 20.8447V18.7372C22.9914 18.2492 22.8137 17.7793 22.4972 17.4078C22.1807 17.0362 21.7451 16.786 21.2647 16.6999ZM21.616 20.915C21.6159 21.0147 21.5945 21.1133 21.5533 21.2042C21.5121 21.295 21.4521 21.3761 21.3772 21.4419C21.2989 21.51 21.2071 21.5609 21.1079 21.5912C21.0086 21.6214 20.9041 21.6304 20.8011 21.6175C18.1701 21.2802 15.7262 20.0765 13.855 18.1964C11.9839 16.3164 10.7918 13.8668 10.467 11.2342C10.4558 11.1313 10.4656 11.0272 10.4958 10.9282C10.526 10.8292 10.5759 10.7373 10.6426 10.6582C10.7084 10.5832 10.7895 10.5232 10.8803 10.482C10.9712 10.4408 11.0698 10.4194 11.1695 10.4193H13.2771C13.4404 10.4157 13.6 10.4691 13.7282 10.5704C13.8564 10.6717 13.9453 10.8145 13.9796 10.9743C14.0077 11.1663 14.0428 11.356 14.085 11.5434C14.1661 11.9137 14.2741 12.2776 14.4081 12.6323L13.4246 13.0889C13.3405 13.1275 13.2649 13.1823 13.202 13.2502C13.1392 13.3181 13.0903 13.3977 13.0584 13.4846C13.0264 13.5714 13.0118 13.6637 13.0156 13.7561C13.0194 13.8485 13.0414 13.9393 13.0804 14.0233C14.0914 16.189 15.8323 17.9298 17.998 18.9409C18.1691 19.0112 18.3609 19.0112 18.5319 18.9409C18.6195 18.9096 18.7001 18.8611 18.7688 18.7984C18.8375 18.7357 18.8931 18.66 18.9324 18.5756L19.3679 17.5921C19.7311 17.7219 20.1018 17.8299 20.4779 17.9152C20.6653 17.9574 20.8549 17.9925 21.047 18.0206C21.2067 18.0549 21.3496 18.1438 21.4509 18.272C21.5522 18.4002 21.6056 18.5598 21.602 18.7231L21.616 20.915Z" fill="#373737"/>
+                </svg>
+                <p>+8801760-007083</p>
+            </div>
+            <div class="contacts">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="16" fill="white"/>
+                    <path d="M20.9 10H11.1C10.543 10 10.0089 10.2212 9.61508 10.6151C9.22125 11.0089 9 11.543 9 12.1V19.1C9 19.657 9.22125 20.1911 9.61508 20.5849C10.0089 20.9788 10.543 21.2 11.1 21.2H20.9C21.457 21.2 21.9911 20.9788 22.3849 20.5849C22.7788 20.1911 23 19.657 23 19.1V12.1C23 11.543 22.7788 11.0089 22.3849 10.6151C21.9911 10.2212 21.457 10 20.9 10ZM11.1 11.4H20.9C21.0857 11.4 21.2637 11.4737 21.395 11.605C21.5263 11.7363 21.6 11.9143 21.6 12.1L16 15.516L10.4 12.1C10.4 11.9143 10.4737 11.7363 10.605 11.605C10.7363 11.4737 10.9143 11.4 11.1 11.4ZM21.6 19.1C21.6 19.2857 21.5263 19.4637 21.395 19.595C21.2637 19.7263 21.0857 19.8 20.9 19.8H11.1C10.9143 19.8 10.7363 19.7263 10.605 19.595C10.4737 19.4637 10.4 19.2857 10.4 19.1V13.696L15.636 16.895C15.7424 16.9564 15.8631 16.9888 15.986 16.9888C16.1089 16.9888 16.2296 16.9564 16.336 16.895L21.6 13.696V19.1Z" fill="#373737"/>
+                </svg>
+                <p>uiuxmdomith@gmail.com</p>
+            </div>
+            <div class="contacts-media">
+
+                <a href="#">
+                    <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 0H8C6.67392 0 5.40215 0.526784 4.46447 1.46447C3.52678 2.40215 3 3.67392 3 5V8H0V12H3V20H7V12H10L11 8H7V5C7 4.73478 7.10536 4.48043 7.29289 4.29289C7.48043 4.10536 7.73478 4 8 4H11V0Z" fill="white"/>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.5 1H8.5C4.35786 1 1 4.35786 1 8.5V23.5C1 27.6421 4.35786 31 8.5 31H23.5C27.6421 31 31 27.6421 31 23.5V8.5C31 4.35786 27.6421 1 23.5 1Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.9999 15.055C22.185 16.3033 21.9718 17.5783 21.3906 18.6985C20.8093 19.8187 19.8896 20.7271 18.7624 21.2945C17.6351 21.8619 16.3576 22.0594 15.1116 21.8589C13.8656 21.6584 12.7146 21.0701 11.8222 20.1777C10.9298 19.2853 10.3415 18.1343 10.141 16.8883C9.94053 15.6423 10.138 14.3648 10.7054 13.2375C11.2728 12.1102 12.1812 11.1906 13.3014 10.6093C14.4216 10.0281 15.6966 9.81485 16.9449 9.99996C18.2183 10.1888 19.3972 10.7822 20.3075 11.6924C21.2177 12.6027 21.8111 13.7816 21.9999 15.055Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M24.25 7.75H24.265" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23 1.01006C22.0424 1.68553 20.9821 2.20217 19.86 2.54006C19.2577 1.84757 18.4573 1.35675 17.567 1.13398C16.6767 0.911216 15.7395 0.967251 14.8821 1.29451C14.0247 1.62177 13.2884 2.20446 12.773 2.96377C12.2575 3.72309 11.9877 4.62239 12 5.54006V6.54006C10.2426 6.58562 8.50127 6.19587 6.93101 5.4055C5.36074 4.61513 4.01032 3.44869 3 2.01006C3 2.01006 -1 11.0101 8 15.0101C5.94053 16.408 3.48716 17.109 1 17.0101C10 22.0101 21 17.0101 21 5.51006C20.9991 5.23151 20.9723 4.95365 20.92 4.68006C21.9406 3.67355 22.6608 2.40277 23 1.01006V1.01006Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 7C16.5913 7 18.1174 7.63214 19.2426 8.75736C20.3679 9.88258 21 11.4087 21 13V20H17V13C17 12.4696 16.7893 11.9609 16.4142 11.5858C16.0391 11.2107 15.5304 11 15 11C14.4696 11 13.9609 11.2107 13.5858 11.5858C13.2107 11.9609 13 12.4696 13 13V20H9V13C9 11.4087 9.63214 9.88258 10.7574 8.75736C11.8826 7.63214 13.4087 7 15 7V7Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5 8H1V20H5V8Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 5C4.10457 5 5 4.10457 5 3C5 1.89543 4.10457 1 3 1C1.89543 1 1 1.89543 1 3C1 4.10457 1.89543 5 3 5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h5>Usefull Links</h5>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Профиль</a></li>
+                <li><a href="#">Войти</a></li>
+                <li><a href="#">Мой профиль</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h5>FAQ</h5>
+            <ul>
+                <li><a href="#">Lorem Ipsum Dolar</a></li>
+                <li><a href="#">Lorem Ipsum Dolar</a></li>
+                <li><a href="#">Lorem Ipsum Dolar</a></li>
+                <li><a href="#">Lorem Ipsum Dolar</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h5>Newsletter</h5>
+
+            <button class="download">Download App</button>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
