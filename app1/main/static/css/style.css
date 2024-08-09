@@ -1,67 +1,10 @@
+{% load static %}
+
 * {
     margin: 0;
     padding: 0;
 }
 
-@font-face {
-    font-family: "Roboto";
-    src: local("./fonts/Roboto-Light.eot"),
-      local("Roboto-Light"),
-      url("./fonts/Roboto-Light.woff2") format("woff2"),
-      url("./fonts/Roboto-Light.woff") format("woff"),
-      url("./fonts/Roboto-Light.ttf") format("truetype"),
-      url("./fonts/Roboto-Light.svg") format("svg");
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Roboto";
-    src: local("./fonts/Roboto-Regular.eot"),
-      local("Roboto-Regular"),
-      url("./fonts/Roboto-Regular.woff2") format("woff2"),
-      url("./fonts/Roboto-Regular.woff") format("woff"),
-      url("./fonts/Roboto-Regular.ttf") format("truetype"),
-      url("./fonts/Roboto-Regular.svg") format("svg");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Roboto";
-    src: local("./fonts/Roboto-Medium.eot"),
-      local("Roboto-Medium"),
-      url("./fonts/Roboto-Medium.woff2") format("woff2"),
-      url("./fonts/Roboto-Medium.woff") format("woff"),
-      url("./fonts/Roboto-Medium.ttf") format("truetype"),
-      url("./fonts/Roboto-Medium.svg") format("svg");
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Roboto";
-    src: local("./fonts/Roboto-Bold.eot"),
-      local("Roboto-Bold"),
-      url("./fonts/Roboto-Bold.woff2") format("woff2"),
-      url("./fonts/Roboto-Bold.woff") format("woff"),
-      url("./fonts/Roboto-Bold.ttf") format("truetype"),
-      url("./fonts/Roboto-Bold.svg") format("svg");
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Revalia";
-    src: local("./fonts/Revalia-Regular.eot"),
-      local("Revalia-Regular"),
-      url("./fonts/Revalia-Regular.woff2") format("woff2"),
-      url("./fonts/Revalia-Regular.woff") format("woff"),
-      url("./fonts/Revalia-Regular.ttf") format("ttf"),
-      url("./fonts/Revalia-Regular.svg") format("svg");
-    font-weight: 400;
-    font-style: normal;
-}
 
 body {
     background-color: white;
@@ -76,7 +19,7 @@ body {
 .main-image-block {
 
     /* background: linear-gradient(  rgba(50, 98, 150, 0.358), rgba(50, 98, 150, 0.358) ), url('img/main.jfif'); */
-    background-image: url('img/main.jfif');
+    /* background-image: url("{% static 'img/main.jfif' %}"); */
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-size: cover;
