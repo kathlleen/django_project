@@ -171,21 +171,23 @@
     </div>
 
     <section class="catalog">
-        <div class="product-card">
-            <div class="image-container">
-                <img src="{% static 'img/f1.jfif' %}" alt="Furniture">
-            </div>
-
-            <div class="product-info">
-                <div class="description">
-                    <h6>Furniture Name</h6>
-                    <h6>$250</h6>
+        <a href="{% url 'catalog:product' %}">
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="{% static 'img/f1.jfif' %}" alt="Furniture">
                 </div>
 
-                <p>It is a long established fact that a reader will be the service.</p>
-                <button class="btn">Order Now</button>
+                <div class="product-info">
+                    <div class="description">
+                        <h6>Furniture Name</h6>
+                        <h6>$250</h6>
+                    </div>
+
+                    <p>It is a long established fact that a reader will be the service.</p>
+                    <button class="btn">Order Now</button>
+                </div>
             </div>
-        </div>
+        </a>
 
         <div class="product-card">
             <div class="image-container">
@@ -301,7 +303,7 @@
     </section>
 
     <div class="view-btn">
-        <button class="btn">View All</button>
+        <button class="btn" onclick="location.href= {% url 'catalog:index' %}">View All</button>
     </div>
 
 
