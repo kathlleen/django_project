@@ -1,10 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About</title>
-</head>
-<body>
+{% extends "main/base.html" %}
+{% load static %}
 
-</body>
-</html>
+
+{% block page_title %}
+    <div class ="page-title">
+        <h1>{{ page_title }}</h1>
+        <h6>{{ page_description }}</h6>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="about-content">
+        <div class="about-image">
+            <img src="{% static 'img/image1.jfif' %}" alt="furniture">
+        </div>
+        <div class="about-info">
+            <p>Lorem Ipsum has been the industry's standard dummy text ever to since the 1500s,
+                type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting. type and scrambled it to make a type specimen book.
+                It has survived not only five centuries,
+                but also the leap into electronic typesetting</p>
+<!--            <button class="btn">О нас</button>-->
+            <div class="about-logos">
+                <img src="{% static 'img/amazon.png' %}" alt="amazon">
+                <img src="{% static 'img/alibaba.png' %}" alt="alibaba">
+            </div>
+        </div>
+    </div>
+
+<section class="service">
+
+    <div class="section-title">
+        <h3>We provide that service</h3>
+        <div class="title-footer">
+            <svg width="69" height="1" viewBox="0 0 69 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="69" height="1" fill="black"/>
+            </svg>
+            <h6>It is a long established fact that a reader <br>
+                will be distracted by the service.</h6>
+        </div>
+    </div>
+
+    <div class="service-cards">
+        <div class="service-card">
+            <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="75" height="75" rx="5" fill="#15BCE0" fill-opacity="0.1"/>
+                <path d="M46 20H16V46H46V20Z" stroke="#15BCE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M46 30H54L60 36V46H46V30Z" stroke="#15BCE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M25 56C27.7614 56 30 53.7614 30 51C30 48.2386 27.7614 46 25 46C22.2386 46 20 48.2386 20 51C20 53.7614 22.2386 56 25 56Z" stroke="#15BCE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M51 56C53.7614 56 56 53.7614 56 51C56 48.2386 53.7614 46 51 46C48.2386 46 46 48.2386 46 51C46 53.7614 48.2386 56 51 56Z" stroke="#15BCE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h5>Free Delevary</h5>
+            <p>It is a long established fact that a reader will be the service.</p>
+        </div>
+        <div class="service-card">
+            <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="75" height="75" rx="5" fill="#E0155E" fill-opacity="0.09"/>
+                <path d="M32 36L36.5 40.5L51.5 25.5" stroke="#E0155E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M50 37.5V48C50 48.7956 49.6839 49.5587 49.1213 50.1213C48.5587 50.6839 47.7956 51 47 51H26C25.2044 51 24.4413 50.6839 23.8787 50.1213C23.3161 49.5587 23 48.7956 23 48V27C23 26.2044 23.3161 25.4413 23.8787 24.8787C24.4413 24.3161 25.2044 24 26 24H42.5" stroke="#E0155E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h5>100% Guarnatee</h5>
+            <p>It is a long established fact that a reader will be the service.</p>
+        </div>
+        <div class="service-card">
+            <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="75" height="75" rx="5" fill="#151DE0" fill-opacity="0.11"/>
+                <path d="M38.0057 20C30.8147 20 24.96 25.1643 24.96 31.5072C24.96 34.444 26.251 37.101 28.312 39.1387L20 50.6859H28.2215L31.9811 56L38.0057 46.6304L44.0302 56L47.7899 50.6859H56L47.6993 39.1387C49.7603 37.101 51.0513 34.444 51.0513 31.5072C51.0513 25.1643 45.1966 20 38.0057 20ZM38.0057 22.5572C43.6225 22.5572 48.1523 26.5527 48.1523 31.5072C48.1523 33.5649 47.3369 35.4329 46.0233 36.9412L44.8003 38.02C43.498 39.1687 41.7427 39.9678 39.8855 40.2974C39.274 40.3973 38.6511 40.4573 38.0057 40.4573C37.3602 40.4573 36.7373 40.3973 36.1258 40.2974C34.2686 39.9678 32.5134 39.1687 31.2111 38.02L29.988 36.9412C28.6744 35.4329 27.8591 33.5649 27.8591 31.5072C27.8591 26.5527 32.3888 22.5572 38.0057 22.5572ZM36.5561 25.1143C36.5561 26.5228 35.5143 27.6715 33.6571 27.6715V30.2286C34.7443 30.2286 35.7182 29.9589 36.5561 29.5294V37.9001H39.4552V25.1143H36.5561ZM30.4863 40.8768C32.3775 42.0555 34.6197 42.7747 37.0544 42.9345L31.8566 51.0055L29.8295 48.1287H25.2771L30.4863 40.8768ZM45.525 40.8768L50.7342 48.1287H46.1931L44.1548 51.0055L38.9569 42.9345C41.3916 42.7747 43.6338 42.0555 45.525 40.8768Z" fill="#151DE0"/>
+            </svg>
+            <h5>Best Quality</h5>
+            <p>It is a long established fact that a reader will be the service.</p>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}

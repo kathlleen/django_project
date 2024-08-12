@@ -131,6 +131,18 @@ li {
     list-style-type: none;
 }
 
+.page-title {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
 .right-block-home {
   position: absolute;
   top: 0;
@@ -239,6 +251,8 @@ li {
     font-family: Roboto;
     font-size: 14px;
     font-weight: 400;
+
+    cursor:pointer;
 
 }
 
