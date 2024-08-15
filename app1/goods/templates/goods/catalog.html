@@ -41,142 +41,28 @@
 
     <section class="catalog">
 
-        <a href="{% url 'catalog:product' %}">
+        {% for product in goods %}
+
+            <a href="{% url 'catalog:product' %}">
             <div class="product-card">
                 <div class="image-container">
-                    <img src="{% static 'img/f1.jfif' %}" alt="Furniture">
+                    <img src="{% static product.image %}" alt="Furniture">
                 </div>
 
                 <div class="product-info">
                     <div class="description">
-                        <h6>Furniture Name</h6>
-                        <h6>$250</h6>
+                        <h6>{{ product.title }}</h6>
+                        <h6>{{ product.price }}</h6>
                     </div>
 
-                    <p>It is a long established fact that a reader will be the service.</p>
+                    <p>{{ product.description }}</p>
                     <button class="btn">Order Now</button>
                 </div>
             </div>
         </a>
 
+        {% endfor %}
 
-        <a href="{% url 'catalog:product' %}">
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="{% static 'img/f2.jfif' %}" alt="Furniture">
-                </div>
-
-                <div class="product-info">
-                    <div class="description">
-                        <h6>Furniture Name</h6>
-                        <h6>$250</h6>
-                    </div>
-
-                    <p>It is a long established fact that a reader will be the service.</p>
-                    <button class="btn">Order Now</button>
-                </div>
-            </div>
-        </a>
-
-        <a href="{% url 'catalog:product' %}">
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="{% static 'img/f3.jfif' %}" alt="Furniture">
-                </div>
-
-                <div class="product-info">
-                    <div class="description">
-                        <h6>Furniture Name</h6>
-                        <h6>$250</h6>
-                    </div>
-
-                    <p>It is a long established fact that a reader will be the service.</p>
-                    <button class="btn">Order Now</button>
-                </div>
-            </div>
-        </a>
-
-        <a href="{% url 'catalog:product' %}">
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="{% static 'img/f4.jfif' %}" alt="Furniture">
-                </div>
-
-                <div class="product-info">
-                    <div class="description">
-                        <h6>Furniture Name</h6>
-                        <h6>$250</h6>
-                    </div>
-
-                    <p>It is a long established fact that a reader will be the service.</p>
-                    <button class="btn">Order Now</button>
-                </div>
-            </div>
-        </a>
-
-        <div class="product-card">
-            <div class="image-container">
-                <img src="{% static 'img/f1.jfif' %}" alt="Furniture">
-            </div>
-
-            <div class="product-info">
-                <div class="description">
-                    <h6>Furniture Name</h6>
-                    <h6>$250</h6>
-                </div>
-
-                <p>It is a long established fact that a reader will be the service.</p>
-                <button class="btn">Order Now</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="image-container">
-                <img src="{% static 'img/f2.jfif' %}" alt="Furniture">
-            </div>
-
-            <div class="product-info">
-                <div class="description">
-                    <h6>Furniture Name</h6>
-                    <h6>$250</h6>
-                </div>
-
-                <p>It is a long established fact that a reader will be the service.</p>
-                <button class="btn">Order Now</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="image-container">
-                <img src="{% static 'img/f3.jfif' %}" alt="Furniture">
-            </div>
-
-            <div class="product-info">
-                <div class="description">
-                    <h6>Furniture Name</h6>
-                    <h6>$250</h6>
-                </div>
-
-                <p>It is a long established fact that a reader will be the service.</p>
-                <button class="btn">Order Now</button>
-            </div>
-        </div>
-
-        <div class="product-card">
-            <div class="image-container">
-                <img src="{% static 'img/f4.jfif' %}" alt="Furniture">
-            </div>
-
-            <div class="product-info">
-                <div class="description">
-                    <h6>Furniture Name</h6>
-                    <h6>$250</h6>
-                </div>
-
-                <p>It is a long established fact that a reader will be the service.</p>
-                <button class="btn">Order Now</button>
-            </div>
-        </div>
     </section>
 
     <div class="view-btn">
