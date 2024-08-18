@@ -1,6 +1,6 @@
 {% extends "main/base.html" %}
 {% load static %}
-
+{% load goods_tags %}
 
 {% block main-image %}
 
@@ -156,6 +156,7 @@
 
         <div class="furniture-links">
             <ul>
+                {% tag_categories as categories %}
                 {% for category in categories %}
                     <li><a href="{% url 'catalog:index' %}">{{ category.name }}</a></li>
                 {% endfor %}
@@ -170,6 +171,13 @@
             <a href="{% url 'catalog:product' %}">
             <div class="product-card">
                 <div class="image-container">
+
+                    {% if product.discount %}
+                        <div class="discount-block">
+                            <p>-{{ product.discount }}%</p>
+                        </div>
+                    {% endif %}
+
                     {% if product.image %}
                         <img src="{{ product.image.url }}" alt="{{ product.name }}">
                     {% else %}
@@ -179,11 +187,17 @@
 
                 <div class="product-info">
                     <div class="description">
-                        <h6>{{ product.name }}</h6>
-                        <h6>{{ product.price }}</h6>
+                        <h6 class="truncate">{{ product.name }}</h6>
+                        <div class="price">
+                            <h6>{{ product.sell_price }}</h6>
+                            {% if product.discount %}
+                                <p><strike>{{ product.price }}</strike></p>
+                            {% endif %}
+                        </div>
                     </div>
 
                     <p class="truncate">{{ product.description }}</p>
+                    <p>id: {{ product.display_id }}</p>
                     <button class="btn">Order Now</button>
                 </div>
             </div>
