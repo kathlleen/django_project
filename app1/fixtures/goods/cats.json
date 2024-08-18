@@ -1,0 +1,74 @@
+[
+  {
+    "model": "goods.categories",
+    "pk": 4,
+    "fields": {
+      "name": "All",
+      "slug": "all"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 11,
+    "fields": {
+      "name": "Chair",
+      "slug": "chair"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 12,
+    "fields": {
+      "name": "Table",
+      "slug": "table"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 13,
+    "fields": {
+      "name": "Bed",
+      "slug": "bed"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 14,
+    "fields": {
+      "name": "Sofa",
+      "slug": "sofa"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 15,
+    "fields": {
+      "name": "Wardrobe",
+      "slug": "wardrobe"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 16,
+    "fields": {
+      "name": "Armchair",
+      "slug": "armchair"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 17,
+    "fields": {
+      "name": "Shelves",
+      "slug": "shelves"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 19,
+    "fields": {
+      "name": "TV Stands",
+      "slug": "tv-stands"
+    }
+  }
+]

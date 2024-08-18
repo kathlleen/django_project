@@ -1,0 +1,170 @@
+[
+  {
+    "model": "goods.products",
+    "pk": 1,
+    "fields": {
+      "name": "Chair GH 607",
+      "slug": "chair-gh-607",
+      "description": "Soft chair",
+      "image": "",
+      "price": "100.00",
+      "discount": "0.00",
+      "quantity": 10,
+      "category": 11
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 2,
+    "fields": {
+      "name": "Table",
+      "slug": "table",
+      "description": "Corinna 10 Seat Dining Table",
+      "image": "",
+      "price": "399.99",
+      "discount": "0.00",
+      "quantity": 1,
+      "category": 12
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 3,
+    "fields": {
+      "name": "Storage Bed",
+      "slug": "storage-bed",
+      "description": "Lavinia Storage Bed Platinum Grey",
+      "image": "",
+      "price": "659.99",
+      "discount": "0.00",
+      "quantity": 4,
+      "category": 13
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 4,
+    "fields": {
+      "name": "Frankfurt Two Seat Sofa",
+      "slug": "frankfurt-two-seat-sofa",
+      "description": "Frankfurt Two Seat Sofa � Ebony Leather",
+      "image": "",
+      "price": "2199.99",
+      "discount": "0.00",
+      "quantity": 3,
+      "category": 14
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 5,
+    "fields": {
+      "name": "Kingston Wardrobe",
+      "slug": "kingston-wardrobe",
+      "description": "Contemporary wardrobe inspired by Colonial Caribbean interiors\r\nSpacious hanging area and two large drawers provide generous storage",
+      "image": "",
+      "price": "899.99",
+      "discount": "0.00",
+      "quantity": 3,
+      "category": 15
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 6,
+    "fields": {
+      "name": "Kingston Wicker Chest of Drawers",
+      "slug": "kingston-wicker-chest-of-drawers",
+      "description": "Contemporary chest of drawers inspired by Colonial Caribbean interiors\r\nSix drawers provide generous storage",
+      "image": "",
+      "price": "699.99",
+      "discount": "0.00",
+      "quantity": 5,
+      "category": 15
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 7,
+    "fields": {
+      "name": "Hatfield Armchair � Calico",
+      "slug": "hatfield-armchair-calico",
+      "description": "A chic compact armchair inspired by upmarket hotel and restaurant interiors. Practical and durable linen effect fabric with a soft, tactile feel",
+      "image": "",
+      "price": "199.99",
+      "discount": "0.00",
+      "quantity": 3,
+      "category": 16
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 8,
+    "fields": {
+      "name": "Melville Swivel chair - Terracotta",
+      "slug": "melville-swivel-chair-terracotta",
+      "description": "A luxurious and indulgent lounge chair, perfect for reading and watching movies. Very comfortable sprung seat with generous deep padding",
+      "image": "",
+      "price": "199.99",
+      "discount": "0.00",
+      "quantity": 4,
+      "category": 16
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 9,
+    "fields": {
+      "name": "Otto Wall Shelf",
+      "slug": "otto-wall-shelf",
+      "description": "A statement wall shelf inspired by highly collectable bespoke 1970�s furnishings.",
+      "image": "",
+      "price": "239.99",
+      "discount": "0.00",
+      "quantity": 11,
+      "category": 17
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 10,
+    "fields": {
+      "name": "Clara Mirrored Wall Shelf",
+      "slug": "clara-mirrored-wall-shelf",
+      "description": "Striking and functional Art Deco inspired design. Perfect for displaying barware, plants and decorative items. Brushed Stainless steel with brass finish",
+      "image": "",
+      "price": "339.99",
+      "discount": "0.00",
+      "quantity": 12,
+      "category": 17
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 11,
+    "fields": {
+      "name": "Lexington Black Sideboard",
+      "slug": "lexington-black-sideboard",
+      "description": "A chic, contemporary sideboard with reeded detailing to door fronts. Durable black polyurethane paint finish",
+      "image": "",
+      "price": "599.99",
+      "discount": "0.00",
+      "quantity": 14,
+      "category": 19
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 12,
+    "fields": {
+      "name": "Origami Media Sideboard",
+      "slug": "origami-media-sideboard",
+      "description": "Large contemporary media sideboard. Striking inlaid matt brass details. Durable black polyurethane paint finish to body, doors and shelves",
+      "image": "",
+      "price": "899.99",
+      "discount": "0.00",
+      "quantity": 13,
+      "category": 19
+    }
+  }
+]
