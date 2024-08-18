@@ -97,7 +97,6 @@ h6 {
 
 }
 
-
 header {
     background-color: white;
     display: flex;
@@ -451,7 +450,7 @@ form button {
 .product-card p {
     font-size: 16px;
     line-height: 24px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .product-info {
@@ -492,7 +491,12 @@ form button {
 .description {
     display: flex;
     flex-direction: row;
-    justify-content: space-between  ;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 footer {

@@ -40,16 +40,20 @@
             <a href="{% url 'catalog:product' %}">
             <div class="product-card">
                 <div class="image-container">
-                    <img src="{% static product.image %}" alt="Furniture">
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    {% else %}
+                        <img src="{% static 'img/no-product.png' %}" alt="Not found image">
+                    {% endif %}
                 </div>
 
                 <div class="product-info">
                     <div class="description">
-                        <h6>{{ product.title }}</h6>
+                        <h6>{{ product.name }}</h6>
                         <h6>{{ product.price }}</h6>
                     </div>
 
-                    <p>{{ product.description }}</p>
+                    <p class="truncate">{{ product.description }}</p>
                     <button class="btn">Order Now</button>
                 </div>
             </div>

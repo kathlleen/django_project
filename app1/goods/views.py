@@ -1,65 +1,15 @@
 from django.shortcuts import render
-from goods.models import Categories
+from goods.models import Categories, Products
 def catalog(request):
     categories = Categories.objects.all()
+    goods = Products.objects.all()
 
     context = {
         "title" : "SQ R3 - Catalog",
         "page_title" : "Catalog",
         "page_description" : "Find out some information about us",
         'categories': categories,
-
-        "goods" : [
-            {
-                "title" : "Furniture name",
-                "price" : "$250",
-                "description" : "It is a long established fact that a reader will be the service.",
-                "image" : "img/f1.jfif"
-            },
-            {
-                "title": "Furniture name",
-                "price": "$250",
-                "description": "It is a long established fact that a reader will be the service.",
-                "image": "img/f2.jfif"
-            },
-            {
-                "title" : "Furniture name",
-                "price" : "$250",
-                "description" : "It is a long established fact that a reader will be the service.",
-                "image" : "img/f3.jfif"
-            },
-            {
-                "title" : "Furniture name",
-                "price" : "$250",
-                "description" : "It is a long established fact that a reader will be the service.",
-                "image" : "img/f4.jfif"
-            },
-            {
-                "title": "Furniture name",
-                "price": "$250",
-                "description": "It is a long established fact that a reader will be the service.",
-                "image": "img/f1.jfif"
-            },
-            {
-                "title": "Furniture name",
-                "price": "$250",
-                "description": "It is a long established fact that a reader will be the service.",
-                "image": "img/f2.jfif"
-            },
-            {
-                "title": "Furniture name",
-                "price": "$250",
-                "description": "It is a long established fact that a reader will be the service.",
-                "image": "img/f3.jfif"
-            },
-            {
-                "title": "Furniture name",
-                "price": "$250",
-                "description": "It is a long established fact that a reader will be the service.",
-                "image": "img/f4.jfif"
-            }
-        ]
-
+        'goods' : goods,
     }
     return render(request, 'goods/catalog.html', context)
 

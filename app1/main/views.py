@@ -2,15 +2,17 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 
-from goods.models import Categories
+from goods.models import Categories, Products
 
 def index(request):
 
     categories = Categories.objects.all()
+    goods = Products.objects.all()
 
     context = {
         "title" : "SQ R3",
-        'categories' : categories
+        'categories' : categories,
+        "goods" : goods
     }
     return render(request, 'main/index.html', context)
 
