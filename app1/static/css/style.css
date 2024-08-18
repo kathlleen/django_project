@@ -40,7 +40,6 @@ a {
     font-family: Roboto;
     font-size: 20px;
     font-weight: 400;
-    /* line-height: 23.44px; */
     color: black;
     text-decoration: none;
 }
@@ -98,6 +97,7 @@ h6 {
 
 }
 
+
 header {
     background-color: white;
     display: flex;
@@ -110,7 +110,7 @@ nav {
     flex-direction: row;
     align-items: center;
     gap: 50px;
-    
+
     margin-right: 50px;
     margin-left: auto;
 }
@@ -121,7 +121,7 @@ nav {
 
 }
 
-ul {
+nav ul {
     display: flex;
     flex-direction: row;
     gap: 35px;
@@ -147,7 +147,6 @@ li {
   position: absolute;
   top: 0;
   left: 0;
-  /* background-color: aliceblue; */
   height: 100%;
   width: 20%;
 
@@ -156,7 +155,7 @@ li {
 	backdrop-filter: blur(7px);
 
   position: relative;
-    
+
 }
 
 .home-media {
@@ -177,18 +176,16 @@ li {
   right: 0;
   height: 45%;
   width: 80%;
-  /* background-color: antiquewhite; */
 
   background: rgba(200, 200, 200, 0.603);
 	-webkit-backdrop-filter: blur(7px);
 	backdrop-filter: blur(7px);
 }
 
+
 .stats {
-  /* position: absolute; */
   top: auto;
   bottom: 0;
-  /* background-color: rgb(130, 130, 130); */
   width: 100%;
 
   height: 165px;
@@ -216,7 +213,7 @@ li {
 }
 
 .black-block {
-    
+
     position: absolute;
     background-color: black;
     left: 0;
@@ -262,7 +259,6 @@ li {
 }
 
 .title-footer {
-    /* margin-top: 15px; */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -284,7 +280,7 @@ li {
     display: flex;
     flex-direction: column;
     gap: 5%;
-    
+
     position: relative;
 }
 
@@ -292,8 +288,6 @@ li {
 .about-image {
     width: 40%;
     object-fit: cover;
-    /* width: 320px; */
-    /* height: 180px; */
 }
 
 .about-image img {
@@ -353,16 +347,14 @@ li {
     width: 400px;
 }
 
-* {box-sizing: border-box;}
 
 form {
   position: relative;
   width: 250px;
-  /* margin: 0 auto; */
 }
 
-input {
-  width: 250px;
+form input {
+  width: 200px;
   height: 50px;
   padding-left: 10px;
   border: none;
@@ -415,6 +407,8 @@ form button {
 }
 
 .furniture-links ul {
+    display: flex;
+    flex-direction: row;
     gap: 0;
     flex-wrap: wrap;
     justify-content: center;
@@ -428,15 +422,13 @@ form button {
     color: black;
 }
 
+
 .catalog {
     display: grid;
     grid-template-columns: repeat(auto-fill, 270px);
     width: 100%;
-    max-width: 80%; /* Ширина grid-контейнера */
+    max-width: 80%;
     justify-content: center;
-    justify-items: center; /* Размещаем карточку по центру */
-    /* column-gap: 30px;
-    row-gap: 40px;  */
 
     gap: 30px;
     margin: 0 auto;
@@ -447,7 +439,6 @@ form button {
     background-color: #F9F9F9;
     height: 340px;
     width: 270px;
-    /* padding: 5px; */
     border-radius: 5px;
     position: relative;
 }
@@ -485,8 +476,8 @@ form button {
 
 .image-container {
     width: 100%;
-    height: 170px; /* Устанавливаем высоту контейнера */
-    overflow: hidden; /* Скрываем излишки изображения */
+    height: 170px;
+    overflow: hidden;
     margin-bottom: 10px;
     padding: 5px;
 }
@@ -495,11 +486,8 @@ form button {
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    object-fit: cover; /* Масштабируем изображение и обрезаем излишки */
+    object-fit: cover;
 }
-
-
-
 
 .description {
     display: flex;
@@ -510,7 +498,7 @@ form button {
 footer {
     margin-top: 120px;
     background-color: #373737;
-    height: 350px;
+    height: auto;
     color: white;
     padding: 90px;
 }
@@ -520,11 +508,10 @@ footer {
     grid-template-columns: repeat(4, 1fr);;
     width: 90%;
     justify-content: center;
-    justify-items: center; /* Размещаем карточку по центру */
+    justify-items: center;
     column-gap: 30px;
     row-gap: 40px; 
     margin: 0 auto;
-    /* margin-top: 50px; */
 }
 
 .footer-column {
@@ -550,7 +537,6 @@ footer {
 footer p {
     font-size: 16px;
     font-weight: 400;
-
 }
 
 footer ul {
