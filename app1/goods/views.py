@@ -1,11 +1,14 @@
 from django.shortcuts import render
-
+from goods.models import Categories
 def catalog(request):
+    categories = Categories.objects.all()
 
     context = {
         "title" : "SQ R3 - Catalog",
         "page_title" : "Catalog",
         "page_description" : "Find out some information about us",
+        'categories': categories,
+
         "goods" : [
             {
                 "title" : "Furniture name",
