@@ -1,21 +1,25 @@
-from django.shortcuts import render
+from django.core.paginator import Paginator
+from django.shortcuts import render, get_list_or_404
 from goods.models import Products
-def catalog(request, category_slug):
+
+def catalog(request, category_slug, page=1):
     # categories = Categories.objects.all()
 
     if category_slug == 'all':
         goods = Products.objects.all()
     else:
-        goods = Products.objects.filter(category__slug=category_slug)
+        goods = get_list_or_404(Products.objects.filter(category__slug=category_slug))
 
-    paginator = Raginator()
+    paginator = Paginator(goods, 4)
+    current_page = paginator.page(page)
 
     context = {
         "title" : "SQ R3 - Catalog",
         "page_title" : "Catalog",
         "page_description" : "Order best furniture right now",
         # 'categories': categories,
-        'goods' : goods,
+        'goods' : current_page,
+        'slug_url' : category_slug
     }
 
     return render(request, 'goods/catalog.html', context)
