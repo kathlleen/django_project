@@ -81,8 +81,7 @@
 
     <div class="pagination">
         <div {% if not goods.has_previous %} class="disabled" {% endif %}>
-            <a href="{% if goods.has_previous %}
-            {% url 'catalog:index' slug_url goods.previous_page_number %}
+            <a href="{% if goods.has_previous %} ?page={{ goods.previous_page_number }}
             {% else %} #
             {% endif %}">Previous</a>
         </div>
@@ -90,7 +89,7 @@
 
         {% for page in goods.paginator.page_range %}
             {% if page >= goods.number|add:-2 and page <= goods.number|add:2 %}
-            <a href="{% url 'catalog:index' slug_url page %}"
+            <a href="?page={{ page }}"
                {% if goods.number == page %} class = "page active"
                {% else %} class="page"
                {% endif %}>{{ page }}</a>
@@ -100,8 +99,7 @@
 <!--        <a href="#" class="page active">1</a>-->
 
         <div {% if not goods.has_next %} class="disabled" {% endif %}>
-            <a href="{% if goods.has_next %}
-            {% url 'catalog:index' slug_url goods.next_page_number %}
+            <a href="{% if goods.has_next %} ?page={{ goods.next_page_number }}
             {% else %} #
             {% endif %}">Next</a>
         </div>
