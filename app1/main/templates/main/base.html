@@ -5,7 +5,9 @@
 <head>
   <meta charset="utf-8" />
   <title>{{ title }}</title>
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  {% block static_css %}
+  {% endblock %}
   <style>
     @font-face {
         font-family: "Roboto";
@@ -83,7 +85,7 @@
             <ul>
                 <li><a href="{% url 'main:index' %}">Home</a></li>
                 <li><a href="{% url 'main:about' %}">O нас</a></li>
-                <li><a href="{% url 'catalog:index' %}">Каталог</a></li>
+                <li><a href="{% url 'catalog:index' 'all' %}">Каталог</a></li>
                 <li><a href="{% url 'admin:index' %}">Админ панель</a></li>
                 <li><a href="#">Мой профиль</a>
             </ul>

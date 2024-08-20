@@ -1,15 +1,55 @@
 {% extends "main/base.html" %}
 {% load static %}
 
+{% block static_css %}
+<link rel="stylesheet" href="{% static 'css/product_style.css' %}"/> {% endblock %}
 
 {% block page_title %}
-    <div class ="page-title">
-        <h1>{{ page_title }}</h1>
-        <h6>{{ page_description }}</h6>
-    </div>
+<div class="page-title">
+    <h1>{{ product.name }}</h1>
+    <h6>{{ page_description }}</h6>
+</div>
 {% endblock %}
 
 {% block content %}
 
+<div class="product">
+    <div class="product-card">
+        <div class="image-container">
+            {% if product.discount %}
+            <div class="discount-block">
+                <p>-{{ product.discount }}%</p>
+            </div>
+            {% endif %}
+            {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% else %}
+            <img src="{% static 'img/no-product.png' %}" alt="Not found image">
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="product-info">
+        <div class="description">
+            <p>{{ product.description }}</p>
+            <p style="font-size: 15px">id: {{ product.display_id }}</p>
+
+            <div class="order">
+
+                <button class="btn">Order</button>
+
+                <div class="price">
+                    <h6>${{ product.sell_price }}</h6>
+                    {% if product.discount %}
+                    <p><strike>${{ product.price }}</strike></p>
+                    {% endif %}
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
 
 {% endblock %}

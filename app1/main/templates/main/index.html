@@ -2,6 +2,9 @@
 {% load static %}
 {% load goods_tags %}
 
+
+{% block static_css %} <link rel="stylesheet" href="{% static 'css/style.css' %}" /> {% endblock %}
+
 {% block main-image %}
 
 <div class="main-image-block" style="background-image: url('{% static 'img/main.jfif' %}');">
@@ -158,7 +161,7 @@
             <ul>
                 {% tag_categories as categories %}
                 {% for category in categories %}
-                    <li><a href="{% url 'catalog:index' %}">{{ category.name }}</a></li>
+                    <li><a href="{% url 'catalog:index' category.slug %}">{{ category.name }}</a></li>
                 {% endfor %}
 
             </ul>
@@ -168,7 +171,7 @@
     <section class="catalog">
         {% for product in goods %}
 
-            <a href="{% url 'catalog:product' %}">
+            <a href="{% url 'catalog:product' product.slug %}">
             <div class="product-card">
                 <div class="image-container">
 
@@ -207,7 +210,7 @@
     </section>
 
     <div class="view-btn">
-        <button class="btn" onclick="location.href= {% url 'catalog:index' %}">View All</button>
+        <button class="btn" onclick="location.href='{% url 'catalog:index' 'all' %}';">View All</button>
     </div>
 
 
