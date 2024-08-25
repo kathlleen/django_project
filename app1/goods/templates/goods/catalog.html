@@ -16,8 +16,8 @@
 <section class="furniture">
 
     <div class="furniture-header">
-        <form>
-            <input type="text" placeholder="Search a furniture">
+        <form role="search" action="{% url 'catalog:search' %}" method='get'>
+            <input type="text" placeholder="Search a furniture" name="q">
             <button type="submit">
                 <svg width="20" height="20" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.6667 22.3334C17.5578 22.3334 22.3334 17.5578 22.3334 11.6667C22.3334 5.77565 17.5578 1 11.6667 1C5.77565 1 1 5.77565 1 11.6667C1 17.5578 5.77565 22.3334 11.6667 22.3334Z"
@@ -30,9 +30,12 @@
 
         <div class="filter-dropdown">
             <button class="filter-btn">Фильтры</button>
-            <form class="dropdown-content" method="get" action="{% url 'catalog:index' slug_url %}">
+            <form class="dropdown-content" method="get" action="{% if request.GET.q %}{% url 'catalog:search' %}
+            {% else %}{% url 'catalog:index' slug_url %}{% endif %}">
                 <label>
-<!--                    <input type="hidden" name="q" value="request.GET.q">-->
+                    {% if request.GET.q %}
+                    <input type="hidden" name="q" value="{{ request.GET.q }}">
+                    {% endif %}
                     <input type="checkbox" name="on_sale" value="on" {% if request.GET.on_sale == 'on' %}checked{% endif %}>
                     Товары по акции
                 </label>
@@ -58,7 +61,7 @@
             <ul>
                 {% tag_categories as categories %}
                 {% for category in categories %}
-                <li><a href="{% url 'catalog:index' category.slug%}">{{ category.name }}</a></li>
+                <li><a href="{% url 'catalog:index' category.slug %}">{{ category.name }}</a></li>
                 {% endfor %}
 
             </ul>
@@ -110,7 +113,7 @@
 
     <div class="pagination">
         <div {% if not goods.has_previous %} class="disabled" {% endif %}>
-            <a href="{% if goods.has_previous %} ?{% change_params page=goods.previous_page_number %}}
+            <a href="{% if goods.has_previous %} ?{% change_params page=goods.previous_page_number %}
             {% else %} #
             {% endif %}">Previous</a>
         </div>
@@ -128,7 +131,7 @@
         <!--        <a href="#" class="page active">1</a>-->
 
         <div {% if not goods.has_next %} class="disabled" {% endif %}>
-            <a href="{% if goods.has_next %} ?{% change_params page=goods.next_page_number %} }}
+            <a href="{% if goods.has_next %} ?{% change_params page=goods.next_page_number %}
             {% else %} #
             {% endif %}">Next</a>
         </div>
