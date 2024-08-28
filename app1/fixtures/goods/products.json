@@ -1,0 +1,436 @@
+[
+  {
+    "model": "goods.products",
+    "pk": 3,
+    "fields": {
+      "name": "Lavinia Storage Bed Mink",
+      "slug": "lavinia_storage_bed_mink",
+      "description": "Impressive tall headboard with deep, chrome plated frame\r\nDistinctive deep buttoned upholstery\r\nChrome plated feet\r\nHeadboard and side rails upholstered in mink velvet fabric\r\nGas lift mechanism for easy opening\r\nLarge internal area, ideal for storing spare bedding, cushions, suitcases etc\r\nAssembly required, approximately 45 minutes\r\nPlease note, due to the generous size of this of the headboard ( height 135cm � width 145cm, 160cm and 190cm, depending on model size) we advise that you check your doorway and staircase dimensions prior to purchasing to ensure a smooth installation",
+      "image": "",
+      "price": "659.99",
+      "discount": "0.00",
+      "quantity": 4,
+      "category": 13
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 4,
+    "fields": {
+      "name": "Frankfurt Two Seat Sofa",
+      "slug": "frankfurt-two-seat-sofa",
+      "description": "A skilfully handcrafted, deep buttoned sofa with elegant curvaceous lines\r\nComfortable foam and fibre seat with sprung base\r\nBrushed stainless steel base with brass finish\r\nBase available in brushed stainless steel finish upon request\r\nVelvet upholstery fabric\r\nDelivered assembled\r\nPlease note, due to the generous size of this of this sofa we advise that you check your doorway dimensions prior to purchasing to ensure a smooth  installation\r\nFree returns on sofas if you change your mind within 7 days\r\nSimply notify us, put the sofa back in the box, and we will collect it and send you a full refund",
+      "image": "goods_images/Frankfurt_Two_Seat_Sofa.jpg",
+      "price": "2199.99",
+      "discount": "15.00",
+      "quantity": 3,
+      "category": 14
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 5,
+    "fields": {
+      "name": "Kingston Wardrobe",
+      "slug": "kingston-wardrobe",
+      "description": "Contemporary wardrobe inspired by Colonial Caribbean interiors\r\nSpacious hanging area and two large drawers provide generous storage\r\nSoft close hinges and drawer runners\r\nSolid wood and MDF construction\r\nDurable black polyurethane paint finish\r\nBlack painted wicker detailing to door fronts\r\nStainless steel handles with brushed brass finish\r\nAssembly required",
+      "image": "goods_images/Kingston_Wardrobe.jpg",
+      "price": "899.99",
+      "discount": "0.00",
+      "quantity": 3,
+      "category": 15
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 6,
+    "fields": {
+      "name": "Kingston Wicker Chest of Drawers",
+      "slug": "kingston-wicker-chest-of-drawers",
+      "description": "Contemporary chest of drawers inspired by Colonial Caribbean interiors\r\nSix drawers provide generous storage\r\nSolid wood construction\r\nDurable black polyurethane paint finish\r\nBlack painted wicker detailing\r\nStainless steel handles with brushed brass finish\r\nSoft close drawers",
+      "image": "goods_images/Kingston_Wicker_Chest.jpg",
+      "price": "699.99",
+      "discount": "10.00",
+      "quantity": 5,
+      "category": 15
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 7,
+    "fields": {
+      "name": "Hatfield Armchair � Calico",
+      "slug": "hatfield-armchair-calico",
+      "description": "A chic compact armchair inspired by upmarket hotel and restaurant interiors\r\nPractical and durable linen effect fabric with a soft, tactile feel\r\nVery comfortable sprung seat with generous deep padding\r\nComfortable backrest with extra wide fluting design\r\nSolid ash legs with matt black finish\r\nSimple assembly required",
+      "image": "goods_images/Hatfield-Armchair_Calico.jpg",
+      "price": "199.99",
+      "discount": "0.00",
+      "quantity": 3,
+      "category": 16
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 8,
+    "fields": {
+      "name": "Melville Swivel chair - Terracotta",
+      "slug": "melville-swivel-chair-terracotta",
+      "description": "A luxurious and indulgent lounge chair, perfect for reading and watching movies\r\nVery comfortable sprung seat with generous deep padding\r\nSwivel base\r\nUpholstered in a soft, tactile chenille fabric",
+      "image": "goods_images/Melville_Swivel_chair.jpg",
+      "price": "199.99",
+      "discount": "0.00",
+      "quantity": 4,
+      "category": 16
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 9,
+    "fields": {
+      "name": "Otto Wall Shelf",
+      "slug": "otto-wall-shelf",
+      "description": "A statement wall shelf inspired by highly collectable bespoke 1970�s furnishings\r\nFeaturing three glass shelves with various shaped apertures designed for displaying and storing decorative accessories, plants and books\r\nMay be used in multiples to create a striking wall feature (please note that this listing is for one unit only)\r\nStainless steel frame with brushed brass finish\r\nToughened glass shelves with deep bevelled edges\r\nSimple assembly required",
+      "image": "goods_images/Otto_wall_shelf.jpg",
+      "price": "239.99",
+      "discount": "0.00",
+      "quantity": 11,
+      "category": 17
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 10,
+    "fields": {
+      "name": "Clara Mirrored Wall Shelf",
+      "slug": "clara-mirrored-wall-shelf",
+      "description": "Striking and functional Art Deco inspired design\r\nPerfect for displaying barware, plants and decorative items\r\nBrushed Stainless steel with brass finish",
+      "image": "goods_images/Clara_mirrored_wall_shelf.jpg",
+      "price": "339.99",
+      "discount": "5.00",
+      "quantity": 12,
+      "category": 17
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 11,
+    "fields": {
+      "name": "Lexington Black Sideboard",
+      "slug": "lexington-black-sideboard",
+      "description": "A chic, contemporary sideboard with reeded detailing to door fronts\r\nDurable black polyurethane paint finish\r\nCable ports and height-adjustable toughened glass shelves make this ideal for use as a television or media unit\r\nSoft-close hinges\r\nBrushed stainless steel legs with brass finish\r\nSimple assembly is required",
+      "image": "goods_images/Lexington_black_sideboard.jpg",
+      "price": "599.99",
+      "discount": "0.00",
+      "quantity": 14,
+      "category": 19
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 12,
+    "fields": {
+      "name": "Origami Media Sideboard",
+      "slug": "origami-media-sideboard",
+      "description": "Large contemporary media sideboard\r\nStriking inlaid matt brass details\r\nDurable black polyurethane paint finish to body, doors and shelves\r\nSteel base with black powder-coated finish\r\nFour doors with sleek matt brass handles\r\nTwo fixed internal shelves\r\nTwo cable ports to the rear, for routing media equipment\r\nWill fit televisions with screens of up to 75�",
+      "image": "goods_images/Origami_media_sideboard.jpg",
+      "price": "899.99",
+      "discount": "0.00",
+      "quantity": 13,
+      "category": 19
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 13,
+    "fields": {
+      "name": "Ophelia Washed Grey Oak Dining Table",
+      "slug": "ophelia-washed-grey-oak-dining-table",
+      "description": "A stylish, contemporary dining table inspired by the Japandi design style\r\nSubstantial weighted wooden pedestal legs with elegant reeding detail\r\nFinished in a warm grey washed oak veneer\r\nGenerous proportions - will comfortably seat six people\r\nTwo person assembly required\r\nThis furniture range has small imperfections on the wood , which are intentional to emphasise its rustic character. These are not faults",
+      "image": "goods_images/Ophelia_dining_table_2.jpg",
+      "price": "1999.99",
+      "discount": "0.00",
+      "quantity": 4,
+      "category": 12
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 14,
+    "fields": {
+      "name": "Garric Dining Chair - Light Taupe",
+      "slug": "garric-dining-chair-light-taupe",
+      "description": "A chic contemporary dining chair with an elegant, curved silhouette\r\nComfortable sprung seat with generous deep padding\r\nSteel legs with black powder-coated finish\r\nAdjustable feet allow for uneven floors\r\nUpholstered in a soft, tactile chenille fabric\r\nMinimal assembly required, simply attach the legs",
+      "image": "goods_images/Garric_dining_chair.jpg",
+      "price": "199.99",
+      "discount": "0.00",
+      "quantity": 22,
+      "category": 11
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 15,
+    "fields": {
+      "name": "Dining chair",
+      "slug": "dining-chair",
+      "description": "Steel legs with black powder-coated finish\r\nAdjustable feet allow for uneven floors\r\nUpholstered in a soft, tactile chenille fabric\r\nMinimal assembly required, simply attach the legs",
+      "image": "goods_images/chair1.jpg",
+      "price": "299.99",
+      "discount": "0.00",
+      "quantity": 17,
+      "category": 11
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 16,
+    "fields": {
+      "name": "Byron Storage Bed Taupe",
+      "slug": "byron-storage-bed-taupe",
+      "description": "Byron is a classic storage bed with handsome characteristics\r\nFeaturing a well-proportioned winged headboard with deep quilting and chrome studs\r\nGas lift mechanism for easy opening\r\nLarge internal area, ideal for storing spare bedding, cushions, suitcases etc\r\nVelvet upholstery fabric\r\nBlack glides to the underside\r\nTwo person assembly required, approximately 45 minutes",
+      "image": "goods_images/Byron_Storage_Bed_Taupe.jpg",
+      "price": "499.99",
+      "discount": "0.00",
+      "quantity": 5,
+      "category": 13
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 17,
+    "fields": {
+      "name": "Baxter Storage Bed Grey",
+      "slug": "baxter-storage-bed-grey",
+      "description": "Elegant fluted headboard with wing feature\r\nSolid ash feet with ebony stain and brushed brass feet\r\nUpholstered in velvet fabric\r\nLarge internal area, ideal for storing spare bedding, cushions, suitcases etc\r\nGas lift mechanism for easy opening\r\nAssembly required, approximately 45 minutes\r\nMattress not included",
+      "image": "goods_images/Baxter_Storage_Bed_Grey.jpg",
+      "price": "525.99",
+      "discount": "0.00",
+      "quantity": 4,
+      "category": 13
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 18,
+    "fields": {
+      "name": "Mason Silver Bed - Brushed Gold Legs",
+      "slug": "mason-silver-bed-brushed-gold-legs",
+      "description": "Elegant bed inspired by highly collectable Mid-Century American furniture\r\nBrushed stainless steel legs with brass finish\r\nVelvet upholstery fabric\r\nAssembly required - approximately 25 minutes",
+      "image": "goods_images/Mason_Silver_Bed.jpg",
+      "price": "399.99",
+      "discount": "0.00",
+      "quantity": 4,
+      "category": 13
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 19,
+    "fields": {
+      "name": "Angelica Dining Chair",
+      "slug": "angelica-dining-chair",
+      "description": "A sophisticated dining chair with a distinctive silhouette\r\nDelicate, precision-engineered steel frame with brushed brass finish\r\nComfortable foam padded seat and backrest\r\nVelvet upholstery fabric\r\nDesigned for use as a dining chair but suitable for use as an accent or dressing table chair\r\nSupplied fully assembled",
+      "image": "goods_images/Angelica_Dining_Chair.jpg",
+      "price": "179.99",
+      "discount": "0.00",
+      "quantity": 21,
+      "category": 11
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 20,
+    "fields": {
+      "name": "Aria Dining Chair",
+      "slug": "aria-dining-chair",
+      "description": "Art Deco inspired dining chair with a distinctive streamline silhouette\r\nBlack powder-coated steel frame\r\nVelvet upholstery fabric",
+      "image": "goods_images/Aria_Dining_Chair.jpg",
+      "price": "249.99",
+      "discount": "0.00",
+      "quantity": 22,
+      "category": 11
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 21,
+    "fields": {
+      "name": "Jolie Dining Chair",
+      "slug": "jolie-dining-chair",
+      "description": "A refined, elegant dining chair\r\nComfortable sprung seat with generous deep padding\r\nSolid ash frame and legs with matt black stained finish\r\nUpholstered in a soft, tactile, chenille fabric",
+      "image": "goods_images/Jolie_Dining_Chair.jpg",
+      "price": "199.99",
+      "discount": "10.00",
+      "quantity": 17,
+      "category": 11
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 22,
+    "fields": {
+      "name": "Juno Circular Dining Table",
+      "slug": "juno-circular-dining-table",
+      "description": "Unusual dining table with a striking hexagonal base\r\nWill seat up to six people\r\nOak veneer top with black satin stain and distinctive radial pattern\r\nSteel base with satin black powder-coated finish\r\nTwo-person assembly is required",
+      "image": "goods_images/Juno_Circular_Dining_Table.jpg",
+      "price": "699.99",
+      "discount": "0.00",
+      "quantity": 0,
+      "category": 12
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 23,
+    "fields": {
+      "name": "Sia Black Coffee Table",
+      "slug": "sia-black-coffee-table",
+      "description": "A refined, understated and timeless coffee table\r\nVery high-quality construction and finish\r\nSolid oak and oak veneer with black satin stain\r\nTwo-person assembly is required",
+      "image": "goods_images/Sia_Black_Coffee_Table.jpg",
+      "price": "329.99",
+      "discount": "0.00",
+      "quantity": 8,
+      "category": 12
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 24,
+    "fields": {
+      "name": "Cala Loveseat",
+      "slug": "cala-loveseat",
+      "description": "A refined, comfortable, luxurious loveseat\r\nThis large scale loveseat will comfortably fit two adults with their legs stretched out � perfect for snuggling up on to watch movies and box sets\r\nFully upholstered in a tactile borg fabric\r\nFeather filled scatter cushions\r\nComfortable foam and fibre seat with sprung base\r\nSupplied fully assembled\r\nPlease note, due to the generous size of this of this item we advise that you check your doorway dimensions prior to purchasing to ensure a smooth installation (restocking charges apply)",
+      "image": "goods_images/Cala_Loveseat.jpg",
+      "price": "879.99",
+      "discount": "0.00",
+      "quantity": 7,
+      "category": 14
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 25,
+    "fields": {
+      "name": "Frankfurt Loveseat - Bottle Green",
+      "slug": "frankfurt-loveseat-bottle-green",
+      "description": "A skilfully handcrafted, deep buttoned loveseat\r\nThis large scale loveseat will comfortably fit two adults with their legs stretched out � perfect for snuggling up on to watch movies and box sets\r\nComfortable foam and fibre seat with sprung base\r\nBrushed stainless steel base with brass finish\r\nVelvet upholstery fabric\r\nSupplied fully assembled\r\nPlease note, due to the generous size of this of this item we advise that you check your doorway dimensions prior to purchasing to ensure a smooth installation",
+      "image": "goods_images/Frankfurt_Loveseat.jpg",
+      "price": "899.99",
+      "discount": "0.00",
+      "quantity": 0,
+      "category": 14
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 26,
+    "fields": {
+      "name": "Beck Left Hand Corner Sofa",
+      "slug": "beck-left-hand-corner-sofa",
+      "description": "Spacious contemporary corner sofa inspired by high-end Italian interiors\r\nSprung seat and backrest with deep foam and fibre filling\r\nFeather-filled scatter cushions\r\nHighly durable soft-touch woven fabric with a linen-like appearance\r\nConstructed from modular components that simply and securely connect together, allowing for ease of installation and multiple configurations\r\nMany other arrangements are possible, please contact our sales team if you require a configuration not featured on our website",
+      "image": "goods_images/Beck_Left_Hand_Corner_Sofa.jpg",
+      "price": "1199.99",
+      "discount": "0.00",
+      "quantity": 9,
+      "category": 14
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 27,
+    "fields": {
+      "name": "Pebble Large Left Hand Corner Sofa",
+      "slug": "pebble-large-left-hand-corner-sofa",
+      "description": "Contemporary design, inspired by relaxed, luxurious Mediterranean Interiors\r\nGentle curves and softened corners define this tactile, inviting sofa\r\nComfortable sprung seat and backrest with deep foam topping\r\nVelvet upholstery fabric, with neat top stitch detailing\r\nSupplied in three parts for ease of transport and installation\r\nFree returns on sofas if you change your mind within 7 days\r\nSimply notify us, put the sofa back in the box, and we will collect it and send you a full refund",
+      "image": "goods_images/Pebble_Large_Left_Hand_Corner_Sofa.jpg",
+      "price": "1499.99",
+      "discount": "0.00",
+      "quantity": 6,
+      "category": 14
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 28,
+    "fields": {
+      "name": "Essen Armchair � Taupe",
+      "slug": "essen-armchair-taupe",
+      "description": "A contemporary armchair inspired by luxurious 1970s Californian interiors\r\nSprung seat and backrest with deep foam and fibre topping\r\nCharacterful deep fluting and blind buttoning\r\nVelvet upholstery fabric",
+      "image": "goods_images/Essen_Armchair_Taupe.jpg",
+      "price": "449.99",
+      "discount": "0.00",
+      "quantity": 17,
+      "category": 16
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 29,
+    "fields": {
+      "name": "Delta Armchair White",
+      "slug": "delta-armchair-white",
+      "description": "A unique statement armchair with dynamic winged back\r\nErgonomic design with headrest and lumbar support\r\nComfortable seat with deep foam and no-sag spring construction\r\nUpholstered legs with brushed brass caps\r\nDistinctive cross stitch detailing\r\nVelvet upholstery fabric",
+      "image": "goods_images/Delta_Armchair_White.jpg",
+      "price": "449.99",
+      "discount": "5.00",
+      "quantity": 15,
+      "category": 16
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 30,
+    "fields": {
+      "name": "Inga Mirrored Floating Corner Unit",
+      "slug": "inga-mirrored-floating-corner-unit",
+      "description": "Inga is a versatile and unique item of furniture that can be used as a shelf, storage unit or compact dressing table\r\nClad in toughened bevelled mirror, it features a spacious drawer and a hidden handle underneath\r\nCombine 2 or 3 units in a vertical arrangement to create an-eye catching and practical display\r\nSimply and securely fixes to your wall via four screw holes to the rear",
+      "image": "goods_images/Inga_Mirrored_Floating_Corner_Unit.jpg",
+      "price": "109.99",
+      "discount": "0.00",
+      "quantity": 33,
+      "category": 17
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 31,
+    "fields": {
+      "name": "Mirrored Rectangular Wall Shelf",
+      "slug": "mirrored-rectangular-wall-shelf",
+      "description": "The Uno mirrored shelves are a unique modular wall-mounted system that can be as simple or expansive as you wish\r\nUse individually, or in multiples to meet your personal requirements\r\nTwo shelves, one square and one rectangular\r\nDesigned to accommodate DVD�s and paperback books\r\nIdeal for use in bathrooms, bedrooms, living rooms and hallways\r\nRecessed keyhole fixings to the back become invisible once installed\r\nBevelled mirrored glass finish\r\nSupplied with drilling template\r\nAll visible sides are covered in mirror",
+      "image": "goods_images/Mirrored_Rectangular_Wall_Shelf.jpg",
+      "price": "64.99",
+      "discount": "0.00",
+      "quantity": 34,
+      "category": 17
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 32,
+    "fields": {
+      "name": "Mason Black TV Media Unit",
+      "slug": "mason_black_tv_media_unit",
+      "description": "Elegant media unit Inspired by highly collectable Mid-Century American furniture\r\nToughened black glass with distinctive curved corners\r\nTwo fold down doors with soft close hinges\r\nAdjustable shelves\r\nCable ports to rear for routing media equipment\r\nBrushed stainless steel legs and handle with brass finish\r\nAssembly required � approximately 10 minutes",
+      "image": "goods_images/Mason_Black_Glass_TV_Media_Unit.jpg",
+      "price": "199.99",
+      "discount": "0.00",
+      "quantity": 14,
+      "category": 19
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 33,
+    "fields": {
+      "name": "Inga Black Oak Floating Sideboard",
+      "slug": "inga-black-oak-floating-sideboard",
+      "description": "The Inga Floating Sideboard provides a useful storage area for media equipment, remotes, chargers, magazines etc\r\nOak veneer with black stain and satin polyurethane lacquer finish\r\nHeight adjustable shelf ( the space at the top and bottom of the shelf can vary from  16 to 18 cm )\r\nPush catch closure\r\nCable port to the rear panel\r\nCan be used individually or in multiples to create longer configurations\r\nWall fixings are provided, however, if you have plasterboard walls and are planning to place a heavy item (such as a television) on the unit, we recommend using suitable heavy-duty plasterboard fixings or consulting a builder for advice",
+      "image": "goods_images/Inga_Black_Oak_Floating_Sideboard.jpg",
+      "price": "229.99",
+      "discount": "10.00",
+      "quantity": 13,
+      "category": 19
+    }
+  }
+]

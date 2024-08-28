@@ -91,7 +91,15 @@
 
                 <div class="product-info">
                     <div class="description">
-                        <h6 class="truncate">{{ product.name }}</h6>
+                        <h6 class="truncate">
+                            {% autoescape off %}
+                            {% if product.headline %}
+                            {{ product.headline }}
+                            {% else %}
+                            {{ product.name }}
+                            {% endif %}
+                            {% endautoescape %}
+                        </h6>
                         <div class="price">
                             <h6>${{ product.sell_price }}</h6>
                             {% if product.discount %}
@@ -100,7 +108,15 @@
                         </div>
                     </div>
 
-                    <p class="truncate">{{ product.description }}</p>
+                    <p class="truncate">
+                        {% autoescape off %}
+                            {% if product.bodyline %}
+                            {{ product.bodyline }}
+                            {% else %}
+                            {{ product.description }}
+                            {% endif %}
+                        {% endautoescape %}
+                    </p>
                     <p>id: {{ product.display_id }}</p>
                     <button class="btn">Order Now</button>
                 </div>
