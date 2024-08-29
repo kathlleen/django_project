@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>{% extends "base.html" %}
+{% load static %}
+
+{% block static_css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}"/> {% endblock %}
+
+{% block page_title %}
+<div class="page-title">
+    <h1>{{ page_title }}</h1>
+    <h6>{{ page_description }}</h6>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="registration-container">
+    <h2>Registration</h2>
+    <form action="#" method="POST" class="registration-form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your first name" required>
+        </div>
+         <div class="form-group">
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" name="surname" placeholder="Enter your second name" required>
+        </div>
+        <div class="form-group">
+            <label for="username">User name</label>
+            <input type="text" id="username" name="username" placeholder="Enter user name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm the password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm the password" required>
+        </div>
+        <button type="submit" class="register-btn">Register</button>
+    </form>
+</div>
+
+{% endblock %}

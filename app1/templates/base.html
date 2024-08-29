@@ -87,7 +87,7 @@
                 <li><a href="{% url 'main:about' %}">O нас</a></li>
                 <li><a href="{% url 'catalog:index' 'all' %}">Каталог</a></li>
                 <li><a href="{% url 'admin:index' %}">Админ панель</a></li>
-                <li><a href="#">Мой профиль</a>
+                <li><a href="{% url 'user:login' %}">Мой профиль</a>
             </ul>
 
             <button class="btn">Корзина</button>

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block static_css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}"/> {% endblock %}
+
+{% block page_title %}
+<div class="page-title">
+    <h1>{{ page_title }}</h1>
+    <h6>{{ page_description }}</h6>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="profile-container">
+        <!-- Блок информации о пользователе -->
+        <div class="user-info">
+            <img src="{% static 'img/baseavatar.png' %}" alt="Аватар пользователя" class="avatar">
+            <div class="user-details">
+                <h2>Имя Пользователя</h2>
+                <p>Email: user@example.com</p>
+                <p>Телефон: +7 (123) 456-78-90</p>
+                <button class="btn">Редактировать профиль</button>
+            </div>
+        </div>
+    </div>
+    <!-- Блок корзины -->
+    <div class="profile-container">
+        <div class="cart">
+            <h3>Корзина</h3>
+            <ul class="cart-items">
+                <li class="cart-item">
+                    <p>Название товара 1</p>
+                    <p>Цена: 1000 ₽</p>
+                </li>
+                <li class="cart-item">
+                    <p>Название товара 2</p>
+                    <p>Цена: 1500 ₽</p>
+                </li>
+                <li class="cart-item">
+                    <p>Название товара 3</p>
+                    <p>Цена: 2000 ₽</p>
+                </li>
+            </ul>
+            <button class="btn">Перейти к оформлению</button>
+        </div>
+    </div>
+
+    <!-- Блок заказов -->
+    <div class="profile-container">
+        <div class="orders">
+            <h3>Заказы</h3>
+            <div class="order">
+                <div class="order-header">
+                    <p>Заказ #1234</p>
+                    <p>Статус: Доставлен</p>
+                    <button class="details-btn">Подробнее</button>
+                </div>
+                <div class="order-details">
+                    <p>Товар 1: Название товара, 1000 ₽</p>
+                    <p>Товар 2: Название товара, 1500 ₽</p>
+                    <p>Общая сумма: 2500 ₽</p>
+                </div>
+            </div>
+            <div class="order">
+                <div class="order-header">
+                    <p>Заказ #1235</p>
+                    <p>Статус: В пути</p>
+                    <button class="details-btn">Подробнее</button>
+                </div>
+                <div class="order-details">
+                    <p>Товар 1: Название товара, 1200 ₽</p>
+                    <p>Товар 2: Название товара, 1800 ₽</p>
+                    <p>Общая сумма: 3000 ₽</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Подключение JS для раскрытия деталей заказа -->
+<script src="{% static 'js/profile.js' %}"></script>
+
+{% endblock %}
+
