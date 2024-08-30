@@ -24,7 +24,7 @@
 
 <div class="registration-container">
     <h2>Registration</h2>
-    <form action="#" method="POST" class="registration-form">
+    <form action="{% url 'user:login' %}" method="post" class="registration-form">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your first name" required>
