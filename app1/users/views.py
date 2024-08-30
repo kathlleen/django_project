@@ -14,6 +14,8 @@ def login(request):
             username = request.POST['username']
             password = request.POST['password']
             user = auth.authenticate(username=username, password=password)
+            if request.GET.get('next', None):
+                return HttpResponseRedirect(request.POST.get('next'))
             if user:
                 auth.login(request, user)
                 return HttpResponseRedirect(reverse('main:index'))
@@ -45,7 +47,6 @@ def registration(request):
     }
     return render(request, 'users/registration.html',context)
 
-
 @login_required
 def profile(request):
     if request.method == "POST":
@@ -61,7 +62,7 @@ def profile(request):
         'form' : form
     }
     return render(request, 'users/profile.html',context)
-
+@login_required
 def logout(request):
     auth.logout(request)
     return redirect(reverse('main:index'))

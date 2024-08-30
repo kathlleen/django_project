@@ -17,6 +17,10 @@
     <h2>Authorization</h2>
     <form action="#" method="POST" class="registration-form">
         {% csrf_token %}
+        {% if request.GET.next %}
+        <input type="hidden" name="next" value="{{requst.GET.next}}">
+
+        {% endif %}
         <div class="form-group">
             <label for="username">User name</label>
             <input type="text" id="username" value = "{% if form.username.value %}{{ form.username.value }}{% endif %}" name="username" placeholder="Enter user name" required>
