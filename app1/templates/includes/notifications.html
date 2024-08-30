@@ -1,0 +1,16 @@
+{% load static%}
+
+{% if form.non_field_errors %}
+    <div style="margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 20px;
+            font-size: 14px;
+            width: 25%;
+            background-color: lightgrey;
+            padding: 10px;
+            border-radius: 5px;
+        ">
+            <p>{{form.non_field_errors}}</p>
+    </div>
+
+{% endif %}
