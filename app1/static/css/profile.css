@@ -98,6 +98,8 @@ h6 {
     line-height: 27px;
 }
 
+
+/* Основной стиль для header */
 header {
     background-color: white;
     display: flex;
@@ -105,31 +107,91 @@ header {
     height: 60px;
 }
 
+/* Стиль для навигации */
 nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 50px;
-
     margin-right: 50px;
     margin-left: auto;
 }
 
-.search-btn {
-    border: none;
-    background: none;
-
-}
-
+/* Стили для списка навигации */
 nav ul {
     display: flex;
     flex-direction: row;
     gap: 35px;
+    margin: 0;
+    padding: 0;
 }
 
+/* Убираем стандартные стили для элементов списка */
 li {
     list-style-type: none;
 }
+
+/* Стили для ссылок */
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 16px;
+    display: block;
+}
+
+/* Стили для кнопки Корзина */
+.btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Стили для dropdown */
+.dropdown {
+    position: relative;
+}
+
+/* Скрываем выпадающее меню по умолчанию */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+
+    border-radius: 5px;
+
+}
+
+/* Стили для ссылок в dropdown */
+.dropdown-content li {
+    width: 100%;
+}
+
+/* Показываем меню при наведении курсора */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    font-size: 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Изменяем фон при наведении на ссылку в dropdown */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+
+    border-radius: 5px;
+}
+
 
 .page-title {
     width: 80%;
