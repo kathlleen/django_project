@@ -7,7 +7,7 @@ from goods.models import Products
 def index(request):
 
     # categories = Categories.objects.all()
-    goods = Products.objects.all()
+    goods = Products.objects.all()[:12]
 
     context = {
         "title" : "SQ R3",

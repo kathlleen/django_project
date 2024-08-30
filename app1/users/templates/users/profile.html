@@ -17,15 +17,72 @@
     <div class="profile-container">
         <!-- Блок информации о пользователе -->
         <div class="user-info">
+            {% if user.image %}
+            <img src="{{ user.image.url }}" alt="Аватар пользователя" class="avatar">
+            {% else %}
             <img src="{% static 'img/baseavatar.png' %}" alt="Аватар пользователя" class="avatar">
+            {% endif %}
             <div class="user-details">
-                <h2>Имя Пользователя</h2>
-                <p>Email: user@example.com</p>
-                <p>Телефон: +7 (123) 456-78-90</p>
+                <h2>{{form.username.value}}</h2>
+                <p>{{form.first_name.value}} {{form.last_name.value}}</p>
+                <p>Email: {{form.email.value}}</p>
                 <button class="btn">Редактировать профиль</button>
             </div>
         </div>
     </div>
+
+    <!-- Блок формы редактирования (скрытый по умолчанию) -->
+    <div class="profile-container edit-form" style="display: none;">
+        <form action="{% url 'user:profile' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_image">Изменить аватар:</label>
+                <input type="file" id="id_image" accept="image/*" name="image">
+                {% if form.image.errors %}
+                <p>{{form.image.errors}}</p>
+                {% endif %}
+            </div>
+            <div class="form-group">
+                <label for="id_username">User name:</label>
+                <input type="text" id="id_username" name="username"
+                       value="{{ form.username.value }}"
+                       required>
+                {% if form.username.errors %}
+                <p>{{form.username.errors}}</p>
+                {% endif %}
+            </div>
+            <div class="form-group">
+                <label for="id_first_name">First name:</label>
+                <input type="text" id="id_first_name" name="first_name"
+                       value="{{ form.first_name.value }}"
+                       required>
+                {% if form.first_name.errors %}
+                <p>{{form.first_name.errors}}</p>
+                {% endif %}
+            </div>
+            <div class="form-group">
+                <label for="id_last_name">Last name:</label>
+                <input type="text" id="id_last_name" name="last_name"
+                       value="{{ form.last_name.value }}"
+                       required>
+                {% if form.last_name.errors %}
+                <p>{{form.last_name.errors}}</p>
+                {% endif %}
+            </div>
+            <div class="form-group">
+                <label for="id_email">Email:</label>
+                <input type="email" id="id_email" name="email"
+                       value="{{ form.email.value }}"
+                       required>
+                {% if form.email.errors %}
+                <p>{{form.email.errors}}</p>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn">Save changes</button>
+        </form>
+
+    </div>
+
     <!-- Блок корзины -->
     <div class="profile-container">
         <div class="cart">

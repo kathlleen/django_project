@@ -140,9 +140,19 @@ nav a {
 
 /* Стили для кнопки Корзина */
 .btn {
+    width: 100px;
+    height: 40px;
+    background-color: #373737;
+    color: white;
+    border-radius: 5px;
     border: none;
-    background: none;
-    cursor: pointer;
+
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+
+    cursor:pointer;
+
 }
 
 /* Стили для dropdown */

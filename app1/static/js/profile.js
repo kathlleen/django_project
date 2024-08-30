@@ -10,3 +10,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+        const editButton = document.querySelector(".user-info .btn");
+        const editForm = document.querySelector(".edit-form");
+
+        editButton.addEventListener("click", function() {
+            if (editForm.style.display === "none") {
+                editForm.style.display = "block";
+            } else {
+                editForm.style.display = "none";
+            }
+        });
+    });
