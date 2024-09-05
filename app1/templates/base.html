@@ -70,6 +70,8 @@
     }
 
 
+
+
     </style>
 
 </head>
@@ -101,9 +103,15 @@
                 <li><a href="{% url 'user:login' %}">Login</a></li>
                 {% endif %}
             </ul>
-            <button class="btn">Корзина</button>
+            <button class="btn" id="cart-btn">Корзина (<span id="cart-count">0</span>)</button>
         </nav>
 
+        <div id="cartModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                {% include "includes/included_cart.html" %}
+            </div>
+        </div>
     </header>
 
 

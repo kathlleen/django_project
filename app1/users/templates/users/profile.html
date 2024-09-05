@@ -86,22 +86,7 @@
     <!-- Блок корзины -->
     <div class="profile-container">
         <div class="cart">
-            <h3>Корзина</h3>
-            <ul class="cart-items">
-                <li class="cart-item">
-                    <p>Название товара 1</p>
-                    <p>Цена: 1000 ₽</p>
-                </li>
-                <li class="cart-item">
-                    <p>Название товара 2</p>
-                    <p>Цена: 1500 ₽</p>
-                </li>
-                <li class="cart-item">
-                    <p>Название товара 3</p>
-                    <p>Цена: 2000 ₽</p>
-                </li>
-            </ul>
-            <button class="btn">Перейти к оформлению</button>
+            {% include "includes/included_cart.html" %}
         </div>
     </div>
 

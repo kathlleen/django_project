@@ -138,14 +138,6 @@ nav a {
     padding: 8px 16px;
     display: block;
 }
-
-/* Стили для кнопки Корзина */
-.btn {
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
 /* Стили для dropdown */
 .dropdown {
     position: relative;
@@ -184,6 +176,52 @@ nav a {
     display: block;
     text-align: left;
 }
+
+/* Количество товаров на кнопке корзины */
+.cart-btn #cart-count {
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 14px;
+}
+
+.checkout-btn {
+
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 
 /* Изменяем фон при наведении на ссылку в dropdown */
 .dropdown-content a:hover {
@@ -261,8 +299,9 @@ nav a {
 
 .btn {
     width: auto;
-    padding-right: 22px;
-    padding-left: 22px;
+    padding-right: 15px;
+    padding-left: 15px;
+    min-width: 100px;
     height: 40px;
     background-color: #373737;
     color: white;
@@ -275,6 +314,7 @@ nav a {
 
     cursor:pointer;
 }
+
 
 .details-btn {
     width: auto;
@@ -430,6 +470,7 @@ footer a {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .checkout-btn, .toggle-details-btn {
