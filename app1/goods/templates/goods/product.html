@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block modal_cart %}
+{% include "includes/cart_button.html" %}
+{% endblock %}
+
 {% block static_css %}
 <link rel="stylesheet" href="{% static 'css/product_style.css' %}"/> {% endblock %}
 
@@ -35,8 +39,10 @@
             <p style="font-size: 15px">id: {{ product.display_id }}</p>
 
             <div class="order">
+                <a href="{% url 'cart:cart_add' product.slug %}">
+                    <button class="btn">Order</button>
+                </a>
 
-                <button class="btn">Order</button>
 
                 <div class="price">
                     <h6>${{ product.sell_price }}</h6>

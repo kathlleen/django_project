@@ -13,16 +13,18 @@ document.addEventListener('click', function(event) {
 document.addEventListener('DOMContentLoaded', function() {
         const cartBtn = document.getElementById('cart-btn');
         const cartModal = document.getElementById('cartModal');
-        const closeModal = document.getElementById('closeModal');
+        const body = document.querySelector('body');
 
         // Открытие модального окна при клике на кнопку корзины
         cartBtn.addEventListener('click', function() {
             cartModal.style.display = 'block';
+            body.style.overflow = 'hidden';
         });
 
         // Закрытие модального окна при клике на кнопку закрытия
         closeModal.addEventListener('click', function() {
             cartModal.style.display = 'none';
+            body.style.overflow = 'auto';
         });
 
         // Закрытие модального окна при клике вне области модального окна

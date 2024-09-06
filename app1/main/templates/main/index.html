@@ -2,8 +2,11 @@
 {% load static %}
 {% load goods_tags %}
 
-
 {% block static_css %} <link rel="stylesheet" href="{% static 'css/style.css' %}" /> {% endblock %}
+
+{% block modal_cart %}
+{% include "includes/cart_button.html" %}
+{% endblock %}
 
 {% block main-image %}
 

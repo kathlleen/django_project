@@ -1,0 +1,13 @@
+{% load static %}
+{% load carts_tags %}
+
+{% user_carts request as carts %}
+
+<button class="btn" id="cart-btn">Корзина (<span id="cart-count">{{ carts.total_quantity }}</span>)</button>
+
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        {% include "includes/included_cart.html" %}
+    </div>
+</div>

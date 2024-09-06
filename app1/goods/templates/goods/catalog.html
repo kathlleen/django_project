@@ -2,6 +2,10 @@
 {% load static %}
 {% load goods_tags %}
 
+{% block modal_cart %}
+{% include "includes/cart_button.html" %}
+{% endblock %}
+
 {% block static_css %}
 <link rel="stylesheet" href="{% static 'css/catalog.css' %}"/> {% endblock %}
 
@@ -72,7 +76,6 @@
 
         {% for product in goods %}
 
-        <a href="{% url 'catalog:product' product.slug %}">
             <div class="product-card">
                 <div class="image-container">
 
@@ -91,15 +94,17 @@
 
                 <div class="product-info">
                     <div class="description">
-                        <h6 class="truncate">
-                            {% autoescape off %}
-                            {% if product.headline %}
-                            {{ product.headline }}
-                            {% else %}
-                            {{ product.name }}
-                            {% endif %}
-                            {% endautoescape %}
-                        </h6>
+                        <a href="{% url 'catalog:product' product.slug %}">
+                            <h6 class="truncate">
+                                {% autoescape off %}
+                                {% if product.headline %}
+                                {{ product.headline }}
+                                {% else %}
+                                {{ product.name }}
+                                {% endif %}
+                                {% endautoescape %}
+                            </h6>
+                        </a>
                         <div class="price">
                             <h6>${{ product.sell_price }}</h6>
                             {% if product.discount %}
@@ -118,10 +123,11 @@
                         {% endautoescape %}
                     </p>
                     <p>id: {{ product.display_id }}</p>
-                    <button class="btn">Order Now</button>
+                    <a href="{% url 'cart:cart_add' product.slug %}">
+                        <button class="btn">Order Now</button>
+                    </a>
                 </div>
             </div>
-        </a>
 
         {% endfor %}
 

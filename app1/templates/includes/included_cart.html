@@ -1,39 +1,35 @@
 {% load static %}
+{% load carts_tags %}
+
+{% user_carts request as carts %}
 
 <h3>Корзина</h3>
-<ul class="cart-items">
+<ul class="cart-items" style="display:flex; flex-direction:column; gap:0;" >
+    {% for cart in carts %}
     <li class="cart-item">
-        <p>Деревянный столик</p>
-        <div style="display:flex; flex-direction:row;">
-            <p style="margin-right:10px;">Цена: 1500 ₽</p>
+        <p>{{ cart.product.name }}</p>
+        <div style="display:flex; flex-direction:row; align-items:baseline;">
+            <span>
+                <button style="width:20px; height:20px; margin:5px;" type= button data_cart_id="">-</button>
+            </span>
+            <input style="width:30px; height:20px; margin:0px; text-align: center;"
+                   type="text" value="{{ cart.quantity }}" readonly>
+            <span>
+                <button style="width:20px; height:20px; margin:5px;" type= button data_cart_id="">+</button>
+            </span>
+            <p style="margin-right:10px;">* {{ cart.product.price }} $</p>
+            <div><strong> {{ cart.products_price }} </strong></div>
             <a href="{% url 'cart:cart_remove' 1 %}">
-                <button class="btn">Удалить</button>
+                <button class="btn">Delete</button>
             </a>
         </div>
     </li>
-    <li class="cart-item">
-        <p>Кровать большая двухместная</p>
-        <div style="display:flex; flex-direction:row;">
-            <p style="margin-right:10px;">Цена: 1500 ₽</p>
-            <a href="{% url 'cart:cart_remove' 1 %}">
-                <button class="btn">Удалить</button>
-            </a>
-        </div>
-    </li>
-    <li class="cart-item">
-        <p>Название товара 3</p>
-        <div style="display:flex; flex-direction:row;">
-            <p style="margin-right:10px;">Цена: 1500 ₽</p>
-            <a href="{% url 'cart:cart_remove' 1 %}">
-                <button class="btn">Удалить</button>
-            </a>
-        </div>
-    </li>
+    {% endfor %}
     <hr>
     <li class="cart-item">
         <p>Total</p>
         <div style="display:flex; flex-direction:row;">
-            <p style="margin-right:10px;">Цена: 1500 ₽</p>
+            <p style="margin-right:10px;">{{ carts.total_price }} $</p>
             <a href="{% url 'cart:cart_remove' 1 %}">
                 <button class="btn">Confirm</button>
             </a>
