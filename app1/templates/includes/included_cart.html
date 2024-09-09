@@ -6,9 +6,9 @@
 <h3>Корзина</h3>
 <ul class="cart-items" style="display:flex; flex-direction:column; gap:0;" >
     {% for cart in carts %}
-    <li class="cart-item">
-        <p>{{ cart.product.name }}</p>
-        <div style="display:flex; flex-direction:row; align-items:baseline;">
+    <li class="cart-item" style="align-items: center;">
+        <p style="height:30px;">{{ cart.product.name }}</p>
+        <div style="display:flex; flex-direction:row; align-items:center;">
             <span>
                 <button style="width:20px; height:20px; margin:5px;" type= button data_cart_id="">-</button>
             </span>
@@ -19,20 +19,22 @@
             </span>
             <p style="margin-right:10px;">* {{ cart.product.price }} $</p>
             <div><strong> {{ cart.products_price }} </strong></div>
-            <a href="{% url 'cart:cart_remove' 1 %}">
+            <a href="{% url 'cart:cart_remove' cart.id %}">
                 <button class="btn">Delete</button>
             </a>
         </div>
     </li>
     {% endfor %}
     <hr>
-    <li class="cart-item">
-        <p>Total</p>
-        <div style="display:flex; flex-direction:row;">
+    <li class="cart-item" style="align-items: center;">
+        <p style="height:30px;">Total</p>
+        <div style="display:flex; flex-direction:row; align-items:center;">
             <p style="margin-right:10px;">{{ carts.total_price }} $</p>
+            {% if carts %}
             <a href="{% url 'cart:cart_remove' 1 %}">
                 <button class="btn">Confirm</button>
             </a>
+            {% endif %}
         </div>
     </li>
 </ul>
