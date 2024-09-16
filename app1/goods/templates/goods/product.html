@@ -39,7 +39,9 @@
             <p style="font-size: 15px">id: {{ product.display_id }}</p>
 
             <div class="order">
-                <a href="{% url 'cart:cart_add' product.slug %}">
+                <a href="{% url 'cart:cart_add' %}"
+                    data-product-id="{{ product.id }}">
+                        {% csrf_token %}
                     <button class="btn">Order</button>
                 </a>
 

@@ -1,5 +1,5 @@
 document.querySelector('.filter-btn').addEventListener('click', function() {
-    var dropdownContent = document.querySelector('.dropdown-content');
+    var dropdownContent = document.querySelector('.dropdown-filters');
     dropdownContent.classList.toggle('show'); // Переключение класса "show"
 });
 

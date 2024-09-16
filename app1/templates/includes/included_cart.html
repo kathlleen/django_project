@@ -19,7 +19,7 @@
             </span>
             <p style="margin-right:10px;">* {{ cart.product.price }} $</p>
             <div><strong> {{ cart.products_price }} </strong></div>
-            <a href="{% url 'cart:cart_remove' cart.id %}">
+            <a href="{% url 'cart:cart_remove' %}">
                 <button class="btn">Delete</button>
             </a>
         </div>
@@ -31,7 +31,7 @@
         <div style="display:flex; flex-direction:row; align-items:center;">
             <p style="margin-right:10px;">{{ carts.total_price }} $</p>
             {% if carts %}
-            <a href="{% url 'cart:cart_remove' 1 %}">
+            <a href="#">
                 <button class="btn">Confirm</button>
             </a>
             {% endif %}

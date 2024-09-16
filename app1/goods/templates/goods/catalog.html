@@ -34,7 +34,7 @@
 
         <div class="filter-dropdown">
             <button class="filter-btn">Фильтры</button>
-            <form class="dropdown-content" method="get" action="{% if request.GET.q %}{% url 'catalog:search' %}
+            <form class="dropdown-filters" method="get" action="{% if request.GET.q %}{% url 'catalog:search' %}
             {% else %}{% url 'catalog:index' slug_url %}{% endif %}">
                 <label>
                     {% if request.GET.q %}
@@ -123,9 +123,12 @@
                         {% endautoescape %}
                     </p>
                     <p>id: {{ product.display_id }}</p>
-                    <a href="{% url 'cart:cart_add' product.slug %}">
+                    <a href="{% url 'cart:cart_add' %}" class="add-to-cart" data-product-id="{{ product.id }}">
+                        {% csrf_token %}
                         <button class="btn">Order Now</button>
+<!--                        <div style="background-color:grey;">{{ product.id }}</div>-->
                     </a>
+
                 </div>
             </div>
 
@@ -162,5 +165,5 @@
 
 </section>
 
-<script src="{% static 'js/catalog.js' %}"></script>
+<!--<script src="{% static 'js/catalog.js' %}"></script>-->
 {% endblock %}
