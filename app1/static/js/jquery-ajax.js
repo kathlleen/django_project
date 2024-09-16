@@ -39,6 +39,42 @@ $(document).ready(function () {
     });
 })
 
+ // Ловим собыитие клика по кнопке удалить товар из корзины
+$(document).on("click", ".remove-from-cart", function (e) {
+    // Блокируем его базовое действие
+    e.preventDefault();
+    // Берем элемент счетчика в значке корзины и берем оттуда значение
+    var goodsInCartCount = $("#cart-count");
+    var cartCount = parseInt(goodsInCartCount.text() || 0);
+    // Получаем id корзины из атрибута data-cart-id
+    var cart_id = $(this).data("cart-id");
+    // Из атрибута href берем ссылку на контроллер django
+    var remove_from_cart = $(this).attr("href");
+    // делаем post запрос через ajax не перезагружая страницу
+    $.ajax({
+        type: "POST",
+        url: remove_from_cart,
+        data: {
+            cart_id: cart_id,
+            csrfmiddlewaretoken: $("[name=csrfmiddlewaretoken]").val(),
+        },
+        success: function (data) {
+
+            // Уменьшаем количество товаров в корзине (отрисовка)
+            cartCount -= data.quantity_deleted;
+            goodsInCartCount.text(cartCount);
+            // Меняем содержимое корзины на ответ от django (новый отрисованный фрагмент разметки корзины)
+            var cartItemsContainer = $("#cart-items-container");
+            cartItemsContainer.html(data.cart_items_html);
+
+        },
+        error: function (data) {
+            console.log("Ошибка при добавлении товара в корзину");
+        },
+    });
+});
+
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -64,9 +100,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const cartModal = document.getElementById('cartModal');
         const closeModal = document.getElementById('closeModal');
         const body = document.querySelector('body');
+
         // Открытие модального окна при клике на кнопку корзины
         cartBtn.addEventListener('click', function() {
             cartModal.style.display = 'block';
+            body.style.overflow = body.style.overflow === 'hidden' ? 'auto' : 'hidden';
             body.style.overflow = 'hidden';
         });
 
@@ -80,6 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
         window.addEventListener('click', function(event) {
             if (event.target === cartModal) {
                 cartModal.style.display = 'none';
+                body.style.overflow = 'auto';
             }
         });
     });

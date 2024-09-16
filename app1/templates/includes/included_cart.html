@@ -19,7 +19,8 @@
             </span>
             <p style="margin-right:10px;">* {{ cart.product.price }} $</p>
             <div><strong> {{ cart.products_price }} </strong></div>
-            <a href="{% url 'cart:cart_remove' %}">
+            <a href="{% url 'cart:cart_remove' %}" class = 'remove-from-cart' data-cart-id="{{ cart.id }}">
+                {% csrf_token %}
                 <button class="btn">Delete</button>
             </a>
         </div>

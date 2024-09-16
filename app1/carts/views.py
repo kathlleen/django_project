@@ -11,7 +11,6 @@ from carts.utils import get_user_carts
 
 def cart_add(request):
     product_id = request.POST.get("product_id")
-    print(f"Received product_id: {product_id}")  # Для отладки
     product = Products.objects.get(id=product_id)
     # product = get_object_or_404(Products, pk=product_id)
 
@@ -38,6 +37,17 @@ def cart_change(request):
     pass
 
 def cart_remove(request):
+    cart_id = request.POST.get("cart_id")
     cart = Cart.objects.get(id=cart_id)
+    quantity = cart.quantity
     cart.delete()
-    return redirect(request.META['HTTP_REFERER'])
+
+    user_cart = get_user_carts(request)
+    cart_items_html = render_to_string("includes/included_cart.html", {"carts": user_cart}, request=request)
+
+    response_data = {
+        "cart_items_html": cart_items_html,
+        "quantity_deleted": quantity,
+    }
+
+    return JsonResponse(response_data)
