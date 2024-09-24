@@ -6,8 +6,11 @@
 <button class="btn" id="cart-btn">Корзина (<span id="cart-count">{{ carts.total_quantity }}</span>)</button>
 
 <div id="cartModal" class="modal">
-    <div class="modal-content" id="cart-items-container">
-        <span class="close" id="closeModal">&times</span>
-        {% include "includes/included_cart.html" %}
+
+    <div class="modal-content">
+        <span class="close" id="closeModal">✘</span>
+        <div id="cart-items-container">
+            {% include "includes/included_cart.html" %}
+        </div>
     </div>
 </div>

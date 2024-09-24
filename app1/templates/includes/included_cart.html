@@ -8,14 +8,20 @@
     {% for cart in carts %}
     <li class="cart-item" style="align-items: center;">
         <p style="height:30px;">{{ cart.product.name }}</p>
-        <div style="display:flex; flex-direction:row; align-items:center;">
+        <div style="display:flex; flex-direction:row; align-items:center;" class="input-group">
             <span>
-                <button style="width:20px; height:20px; margin:5px;" type= button data_cart_id="">-</button>
+                <button style="width:20px; height:20px; margin:5px;" class="decrement"
+                        type="button" data-cart-id="{{ cart.id }}" data-cart-change-url="{% url 'cart:cart_change' %}">
+                    {% csrf_token %}
+                    -</button>
             </span>
             <input style="width:30px; height:20px; margin:0px; text-align: center;"
-                   type="text" value="{{ cart.quantity }}" readonly>
+                   class="number" type="text" value="{{ cart.quantity }}" readonly>
             <span>
-                <button style="width:20px; height:20px; margin:5px;" type= button data_cart_id="">+</button>
+                <button style="width:20px; height:20px; margin:5px;" class="increment"
+                        type="button" data-cart-id="{{ cart.id }}" data-cart-change-url="{% url 'cart:cart_change' %}">
+                    {% csrf_token %}
+                    +</button>
             </span>
             <p style="margin-right:10px;">* {{ cart.product.price }} $</p>
             <div><strong> {{ cart.products_price }} </strong></div>

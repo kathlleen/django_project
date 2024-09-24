@@ -32,7 +32,9 @@
                 luxurious furniture</h1>
             <p>If you are looking for a furniture then you have <br>
                 come to the right place.</p>
-            <button class="btn">Order now</button>
+            <a href="{% url 'catalog:index' 'all' %}">
+                <button class="btn">Order now</button>
+            </a>
         </section>
     </div>
 </div>
