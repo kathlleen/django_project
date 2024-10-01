@@ -34,7 +34,8 @@ class Cart(models.Model):
 
     objects = CartQueryset().as_manager()
     def __str__(self): # перегружаем для отображения названия в бд
-        return f'Cart {self.user.username} | Product {self.product.name} | Quantity {self.quantity}'
-
+        if self.user:
+            return f'Cart {self.user.username} | Product {self.product.name} | Quantity {self.quantity}'
+        return f'Cart | Product {self.product.name} | Quantity {self.quantity}'
     def product_price(self):
         return self.product.price * self.quantity
