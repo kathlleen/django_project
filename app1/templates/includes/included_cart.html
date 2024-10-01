@@ -3,7 +3,7 @@
 
 {% user_carts request as carts %}
 
-<h3>Корзина</h3>
+<h3>Cart</h3>
 <ul class="cart-items" style="display:flex; flex-direction:column; gap:0;" >
     {% for cart in carts %}
     <li class="cart-item" style="align-items: center;">
@@ -38,8 +38,8 @@
         <div style="display:flex; flex-direction:row; align-items:center;">
             <p style="margin-right:10px;">{{ carts.total_price }} $</p>
             {% if carts %}
-            <a href="#">
-                <button class="btn">Confirm</button>
+            <a href="{% url 'orders:create_order' %}">
+                <button class="btn">Order</button>
             </a>
             {% endif %}
         </div>
