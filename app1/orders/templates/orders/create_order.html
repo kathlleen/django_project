@@ -57,7 +57,7 @@
                     <label for="id_phone_number" class="form-label">Phone number*:</label>
                     <input type="text" class="form-control" id="id_phone_number" name="phone_number"
                            value="{% if form.phone_number.value %}{{ form.phone_number.value }}{% endif %}"
-                           placeholder="(000) 000-0000"
+                           placeholder="+375290000000"
                            required>
                     {% if form.phone_number.errors %}
                     <p>{{form.phone_number.errors}}</p>

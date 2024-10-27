@@ -21,13 +21,13 @@ class CreateOrderForm(forms.Form):
     )
 
 
-    def clean_phone_number(self):
+    def clean_phone_number(self): # валидация телефона
         data = self.cleaned_data['phone_number']
+        #
+        # if not data.isdigit():
+        #     raise forms.ValidationError("Номер телефона должен содержать только цифры")
 
-        if not data.isdigit():
-            raise forms.ValidationError("Номер телефона должен содержать только цифры")
-
-        pattern = re.compile(r'^\d{10}$')
+        pattern = re.compile(r'^(\+375|80)(29|25|44|33)(\d{3})(\d{2})(\d{2})$')
         if not pattern.match(data):
             raise forms.ValidationError("Неверный формат номера")
 
