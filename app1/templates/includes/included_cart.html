@@ -37,7 +37,7 @@
         <p style="height:30px;">Total</p>
         <div style="display:flex; flex-direction:row; align-items:center;">
             <p style="margin-right:10px;">{{ carts.total_price }} $</p>
-            {% if carts %}
+            {% if carts and not order %}
             <a href="{% url 'orders:create_order' %}">
                 <button class="btn">Order</button>
             </a>
