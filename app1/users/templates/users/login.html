@@ -15,7 +15,7 @@
 
 <div class="registration-container">
     <h2>Authorization</h2>
-    <form action="#" method="POST" class="registration-form">
+    <form action="{% url 'user:login' %}" method="POST" class="registration-form">
         {% csrf_token %}
         {% if request.GET.next %}
         <input type="hidden" name="next" value="{{requst.GET.next}}">
