@@ -137,17 +137,17 @@
     </section>
 
     <div class="pagination">
-        <div {% if not goods.has_previous %} class="disabled" {% endif %}>
-            <a href="{% if goods.has_previous %} ?{% change_params page=goods.previous_page_number %}
+        <div {% if not page_obj.has_previous %} class="disabled" {% endif %}>
+            <a href="{% if page_obj.has_previous %} ?{% change_params page=page_obj.previous_page_number %}
             {% else %} #
             {% endif %}">Previous</a>
         </div>
 
 
-        {% for page in goods.paginator.page_range %}
-        {% if page >= goods.number|add:-2 and page <= goods.number|add:2 %}
+        {% for page in page_obj.paginator.page_range %}
+        {% if page >= page_obj.number|add:-2 and page <= page_obj.number|add:2 %}
         <a href="?{% change_params page=page %}"
-           {% if goods.number == page %} class="page active"
+           {% if page_obj.number == page %} class="page active"
            {% else %} class="page"
            {% endif %}>{{ page }}</a>
         {% endif %}
@@ -155,8 +155,8 @@
 
         <!--        <a href="#" class="page active">1</a>-->
 
-        <div {% if not goods.has_next %} class="disabled" {% endif %}>
-            <a href="{% if goods.has_next %} ?{% change_params page=goods.next_page_number %}
+        <div {% if not page_obj.has_next %} class="disabled" {% endif %}>
+            <a href="{% if page_obj.has_next %} ?{% change_params page=page_obj.next_page_number %}
             {% else %} #
             {% endif %}">Next</a>
         </div>
