@@ -1,6 +1,7 @@
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
+from django.views.generic import CreateView
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
@@ -46,6 +47,29 @@ class UserLoginView(LoginView):
         context['title'] = 'Authorization'
         return context
 
+class UserRegistrationView(CreateView):
+    template_name = 'users/registration.html'
+    form_class = UserRegistrationForm
+    success_url = reverse_lazy('users:profile')
+
+    def form_valid(self, form):
+        session_key = self.request.session.session_key
+        user = form.instance
+
+        if user:
+            form.save()
+            auth.login(self.request, user)
+
+        if session_key:
+            Cart.objects.filter(session_key=session_key).update(user=user)
+
+        return HttpResponseRedirect(self.success_url)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Registration'
+        return context
+
 
 
 # def login(request):
@@ -80,30 +104,30 @@ class UserLoginView(LoginView):
 #     }
 #     return render(request, 'users/login.html',context)
 
-def registration(request):
-
-    if request.method == "POST":
-        form = UserRegistrationForm(data=request.POST)
-        if form.is_valid():
-            form.save()
-
-            session_key = request.session.session_key
-
-            user = form.instance
-            auth.login(request, user)
-
-            if session_key:
-                Cart.objects.filter(session_key=session_key).update(user=user)
-            return HttpResponseRedirect(reverse('main:index'))
-    else:
-        form = UserRegistrationForm()
-
-
-    context = {
-        'title' : "Registration",
-        'form' : form
-    }
-    return render(request, 'users/registration.html',context)
+# def registration(request):
+#
+#     if request.method == "POST":
+#         form = UserRegistrationForm(data=request.POST)
+#         if form.is_valid():
+#             form.save()
+#
+#             session_key = request.session.session_key
+#
+#             user = form.instance
+#             auth.login(request, user)
+#
+#             if session_key:
+#                 Cart.objects.filter(session_key=session_key).update(user=user)
+#             return HttpResponseRedirect(reverse('main:index'))
+#     else:
+#         form = UserRegistrationForm()
+#
+#
+#     context = {
+#         'title' : "Registration",
+#         'form' : form
+#     }
+#     return render(request, 'users/registration.html',context)
 
 @login_required
 def profile(request):
