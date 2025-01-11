@@ -1,7 +1,8 @@
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LoginView
-from django.views.generic import CreateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import CreateView, UpdateView
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
@@ -70,7 +71,32 @@ class UserRegistrationView(CreateView):
         context['title'] = 'Registration'
         return context
 
+class UserProfileView(LoginRequiredMixin, UpdateView):
+    template_name = 'users/profile.html'
+    form_class = ProfileForm
+    success_url = reverse_lazy('users:profile')
 
+    def get_object(self, queryset=None):
+        return self.request.user
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Profile'
+        context['orders'] = Order.objects.filter(user=self.request.user).prefetch_related(
+            Prefetch(
+                "orderitem_set",
+                queryset=OrderItem.objects.select_related("product"),
+            )
+        ).order_by("-id")
+        return context
+
+# class UserCartView(TemplateView):
+#     template_name = 'users/users_cart.html'
+#
+#     def det_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['title'] = 'Cart'
+#         return context
 
 # def login(request):
 #     if request.method == "POST":
@@ -129,33 +155,33 @@ class UserRegistrationView(CreateView):
 #     }
 #     return render(request, 'users/registration.html',context)
 
-@login_required
-def profile(request):
-    if request.method == "POST":
-        form = ProfileForm(data=request.POST, instance=request.user, files=request.FILES)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect(reverse('user:profile'))
-    else:
-        form = ProfileForm(instance=request.user)
-
-    orders = (
-        Order.objects.filter(user=request.user)
-            .prefetch_related(
-                Prefetch(
-                    'orderitem_set',
-                    queryset=OrderItem.objects.select_related('product'),
-                )
-            )
-            .order_by("-id")
-    )
-
-    context = {
-        'title' : "Profile",
-        'form' : form,
-        'orders' : orders,
-    }
-    return render(request, 'users/profile.html',context)
+# @login_required
+# def profile(request):
+#     if request.method == "POST":
+#         form = ProfileForm(data=request.POST, instance=request.user, files=request.FILES)
+#         if form.is_valid():
+#             form.save()
+#             return HttpResponseRedirect(reverse('user:profile'))
+#     else:
+#         form = ProfileForm(instance=request.user)
+#
+#     orders = (
+#         Order.objects.filter(user=request.user)
+#             .prefetch_related(
+#                 Prefetch(
+#                     'orderitem_set',
+#                     queryset=OrderItem.objects.select_related('product'),
+#                 )
+#             )
+#             .order_by("-id")
+#     )
+#
+#     context = {
+#         'title' : "Profile",
+#         'form' : form,
+#         'orders' : orders,
+#     }
+#     return render(request, 'users/profile.html',context)
 @login_required
 def logout(request):
     auth.logout(request)
