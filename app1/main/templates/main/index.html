@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% load goods_tags %}
+{% load cache %}
 
 {% block static_css %} <link rel="stylesheet" href="{% static 'css/style.css' %}" /> {% endblock %}
 
@@ -164,11 +165,12 @@
 
         <div class="furniture-links">
             <ul>
+                {% cache 60 catalog_categories %}
                 {% tag_categories as categories %}
                 {% for category in categories %}
                     <li><a href="{% url 'catalog:index' category.slug %}">{{ category.name }}</a></li>
                 {% endfor %}
-
+                {% endcache %}
             </ul>
         </div>
     </div>
