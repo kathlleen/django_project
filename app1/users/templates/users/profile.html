@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cache %}
 
 {% block static_css %}
 <link rel="stylesheet" href="{% static 'css/profile.css' %}"/> {% endblock %}
@@ -91,6 +92,8 @@
     </div>
 
     <!-- Блок заказов -->
+
+<!--    {% cache 60 user_orders user.id %}-->
     <div class="profile-container">
         <div class="orders">
             <h3>Orders</h3>
@@ -123,6 +126,7 @@
 <!--            </div>-->
         </div>
     </div>
+<!--    {% endcache %}-->
 </div>
 <!-- Подключение JS для раскрытия деталей заказа -->
 <script src="{% static 'js/profile.js' %}"></script>
