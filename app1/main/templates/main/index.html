@@ -153,8 +153,8 @@
     </div>
 
     <div class="furniture-header">
-        <form>
-            <input type="text" placeholder="Search a furniture">
+        <form role="search" action="{% url 'catalog:search' %}" method='get'>
+            <input type="text" placeholder="Search a furniture" name="q">
             <button type="submit">
                 <svg width="20" height="20" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.6667 22.3334C17.5578 22.3334 22.3334 17.5578 22.3334 11.6667C22.3334 5.77565 17.5578 1 11.6667 1C5.77565 1 1 5.77565 1 11.6667C1 17.5578 5.77565 22.3334 11.6667 22.3334Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
